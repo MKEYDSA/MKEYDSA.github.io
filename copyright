@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: UWMYDSA.github.io
+Upstream-Contact: YDSA@UWM <uwmdsa@gmail.com>
+Source: https://github.com/UWMYDSA/UWMYDSA.github.io
+
+Files: *
+Copyright: YDSA@UWM <uwmdsa@gmail.com>
+License: MPL 2.0
