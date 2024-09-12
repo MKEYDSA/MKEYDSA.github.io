@@ -1,2 +1,2 @@
 # UWMYDSA.github.io
-THE YDSA@UWM website
+The website of the MKE YDSA and associated chapters
