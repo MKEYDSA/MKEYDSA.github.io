@@ -1,4 +1,4 @@
-# UWMYDSA.github.io
+# MKEYDSA.github.io
 The website of the MKE YDSA and associated chapters
 
 ## Dependencies
