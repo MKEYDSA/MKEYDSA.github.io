@@ -1,5 +1,4 @@
 ---
-title: Home
 hero:
   title: "Fighting for a Socialist Future"
 layout: "base.liquid"
