@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="{{ eleventy.generator }}">
+    <link
+      rel="shortcut icon"
+      href="{{ favicon }}"
+      type="image/x-icon">
     <link rel="stylesheet" href="/static/style/common.css">
-    <title>{{ title }}</title>
+    {% if title %}
+      <title>{{ title }} | {{ org }}</title>
+    {% else %}
+      <title>{{ org }}</title>
+    {% endif %}
   </head>
   <body>
     <div class="wrapper">
