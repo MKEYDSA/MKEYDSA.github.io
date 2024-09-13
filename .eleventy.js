@@ -1,8 +1,9 @@
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./static/");
+    eleventyConfig.addPassthroughCopy("./LICENSE");
     
     // Defaults
-    eleventyConfig.addGlobalData("favicon", "/static/img/favicon.png");
+    eleventyConfig.addGlobalData("favicon", "/static/img/favicon.ico");
     eleventyConfig.addGlobalData("org", "Milwaukee YDSA");
     eleventyConfig.addGlobalData("hero.img", "/static/img/hero/index.png");
     eleventyConfig.addGlobalData("hero.color", "red-tint-1");
