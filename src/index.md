@@ -2,8 +2,6 @@
 title: Home
 hero:
   title: "Fighting for a Socialist Future"
-  img: "/static/img/hero/index.png"
-  color: "red-tint-1"
 layout: "base.liquid"
 ---
 
