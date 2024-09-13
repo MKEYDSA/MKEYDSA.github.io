@@ -1,0 +1,24 @@
+{
+  "name": "mkeydsa.github.io",
+  "version": "1.0.0",
+  "description": "The website of the MKE YDSA and associated chapters",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MKEYDSA/MKEYDSA.github.io.git"
+  },
+  "keywords": [],
+  "author": "MKE YDSA",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/MKEYDSA/MKEYDSA.github.io/issues"
+  },
+  "homepage": "https://github.com/MKEYDSA/MKEYDSA.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
