@@ -39,17 +39,35 @@
 
 main {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
 }
 
 .flex {
     display: flex;
 }
 
+.right {
+    margin-left: auto;
+    margin-right: 0;
+}
+
 img {
     width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+header nav {
+    width: 100%;
+    align-items: last baseline;
+    font-size: 30px;
+}
+
+header nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: var(--black);
+}
+
+h1, h2, h3, h4, h5, h6, nav {
     font-family: "Manifold DSA", Impact, "Franklin Gothic Bold", "Arial Black", sans-serif;
     font-weight: 600;
 }
