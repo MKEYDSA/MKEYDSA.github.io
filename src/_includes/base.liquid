@@ -17,15 +17,34 @@
   </head>
   <body>
     <div class="wrapper">
+      <header>
+        <div class="flex">
+          <a href="/">
+            <img src="{{ logo }}">
+          </a>
+          <nav class="right flex">
+            {% for link in navigation %}
+              <a href="{{ link.url }}">
+                {{ link.text }}
+              </a>
+            {% endfor %}
+          </nav>
+        </div>
+        <hr>
+      </header>
+
       {% comment %}
         TWO POSSIBLE OPTIONS
         1. Simple banner (see commented out code)
         2. Title with accompanying image (B&R Style)
       {% endcomment %}
       {% comment %} <img src="https://placehold.co/1200x400"> {% endcomment %}
-      <div class="hero" style="background-image: url({{ hero.img }}); background-color: var(--{{ hero.color }})">
-        <h1>{{ hero.title }}</h1>
-      </div>
+      {% if hero.title %}
+        <div class="hero" style="background-image: url({{ hero.img }}); background-color: var(--{{ hero.color }})">
+          <h1>{{ hero.title }}</h1>
+        </div>
+      {% endif %}
+
       <main>
         <div class="content">
           {{ content }}
