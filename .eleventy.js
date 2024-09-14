@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
     // Defaults
     eleventyConfig.addGlobalData("favicon", "/static/img/favicon.ico");
     eleventyConfig.addGlobalData("org", "Milwaukee YDSA");
+    eleventyConfig.addGlobalData("logo", "/static/img/logo.jpg")
     eleventyConfig.addGlobalData("hero.img", "/static/img/hero/index.png");
     eleventyConfig.addGlobalData("hero.color", "red-tint-1");
 
