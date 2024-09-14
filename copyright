@@ -7,7 +7,15 @@ Files: *
 Copyright: YDSA@UWM <uwmdsa@gmail.com>
 License: MPL-2.0
 
+Files: admin/
+Copyright: Netlify <decap@p-m.si>
+License: MIT
+
 License: MPL-2.0
  This Source Code Form is subject to the terms of the Mozilla Public
  License, v. 2.0. If a copy of the MPL was not distributed with this
  file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+License: MIT
+ This work is licensed under the terms of the MIT license.  
+ For a copy, see <https://opensource.org/licenses/MIT>.
