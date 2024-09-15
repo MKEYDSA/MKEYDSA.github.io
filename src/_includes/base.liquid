@@ -19,9 +19,12 @@
     <div class="wrapper">
       <header>
         <div class="flex">
+          {% comment %} use the org's logo for the home button {% endcomment %}
           <a href="/">
             <img src="{{ logo }}">
           </a>
+
+          {% comment %} use navbar for local org {% endcomment %}
           <nav class="right flex">
             {% for link in navigation %}
               <a href="{{ link.url }}">
