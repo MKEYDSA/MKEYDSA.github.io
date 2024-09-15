@@ -56,7 +56,6 @@ img {
 }
 
 header nav {
-    width: 100%;
     align-items: last baseline;
     font-size: 30px;
 }
@@ -65,6 +64,21 @@ header nav a {
     margin-left: 15px;
     text-decoration: none;
     color: var(--black);
+    padding: 2px;
+}
+
+header nav a:hover {
+    background-color: var(--black);
+    color: white;
+}
+
+header div {
+    margin-bottom: 0;
+}
+
+header hr {
+    margin-top: 0;
+    margin-bottom: 12px;
 }
 
 h1, h2, h3, h4, h5, h6, nav {
