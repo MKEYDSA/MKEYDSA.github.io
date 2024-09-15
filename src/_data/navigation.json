@@ -1,4 +1,4 @@
 [
-	{"text": "About", "url": "/about"},
-	{"text": "Posts", "url": "/posts"}
+	{"text": "about", "url": "/about"},
+	{"text": "posts", "url": "/posts"}
 ]
