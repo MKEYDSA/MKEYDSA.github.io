@@ -1,0 +1,19 @@
+---
+layout: "base.liquid"
+---
+
+<div class="flex">
+  <div class="content">
+    {{ content }}
+  </div>
+  <aside>
+    <h2>Follow Us</h2>
+    {% for link in socials %}
+      <h3>
+        <a href="{{ link.url }}">{{ link.text }}</a>
+      </h3>
+    {% endfor %}
+    <h2>Join YDSA</h2>
+
+  </aside>
+</div>
