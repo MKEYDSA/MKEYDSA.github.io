@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="{{ eleventy.generator }}">
     <link
-      rel="shortcut icon"
-      href="{{ favicon }}"
-      type="image/x-icon">
+      rel="icon"
+      href="{{ favicon-32 }}"
+      type="image/x-icon"
+      sizes="32x32">
+    <link
+      rel="icon"
+      href="{{ favicon-192 }}"
+      type="image/x-icon"
+      sizes="192x192">
     <link rel="stylesheet" href="/static/style/common.css">
+    <link
+      rel="stylesheet"
+      href="/static/style/print.css"
+      media="print">
     {% if title %}
       <title>{{ title }} | {{ org }}</title>
     {% else %}
@@ -49,9 +59,7 @@
       {% endif %}
 
       <main>
-        <div class="content">
-          {{ content }}
-        </div>
+        {{ content }}
       </main>
     </div>
   </body>
