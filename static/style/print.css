@@ -1,0 +1,11 @@
+nav {
+    display: none !important;
+}
+
+aside {
+    display: none !important;
+}
+
+.content {
+    margin: 0 !important;
+}
