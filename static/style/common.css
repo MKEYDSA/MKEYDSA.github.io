@@ -13,12 +13,13 @@
     --black-tint-2: #605C5C;
     --black-tint-3: #8C8989;
     --black-tint-4: #C1C0BF;
+
+    --off-white: #F2F3F4;
 }
 
 .wrapper {
     width: calc(100% - 20px);
     margin: 0 auto;
-    background-color: #fff;
 }
 
 .content {
@@ -27,6 +28,10 @@
 
 aside {
     width: calc(100% - 40px);
+}
+
+html {
+    background-color: var(--off-white);
 }
 
 @media screen and (min-width: 1024px) {
