@@ -1,5 +1,8 @@
 [
-	{"text": "about", "url": "/about"},
+	{"text": "about", "url": "/about", "subcategories": [
+		{"text": "our constitution", "url": "https://docs.google.com/document/d/1iF8QiCNHkIb_2EMVL7hazMFQKIVpR1f1NUfHVArs1og/edit?usp=sharing"},
+		{"text": "leadership", "url": "/about/leadership"}
+	]},
 	{"text": "chapters", "url": "/chapters"},
 	{"text": "posts", "url": "/posts"}
 ]
