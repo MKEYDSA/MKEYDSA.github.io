@@ -256,7 +256,7 @@ main > .flex {
     }
 
     main > .flex {
-        display: flex !important;
+        flex-direction: row !important;
     }
 
     .hero h1 {
