@@ -35,11 +35,11 @@ a {
     color: var(--red);
 }
 
-.content a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="//mkeydsa.github.io"]):after {
+.content a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="//*mkeydsa"]):after {
     content: url('/static/img/outlink.svg');
 }
 
-.content a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="//mkeydsa.github.io"]):hover:after {
+.content a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="//*mkeydsa"]):hover:after {
     content: url('/static/img/outlink-hover.svg');
 }
 
@@ -81,6 +81,37 @@ aside h2 {
     margin-right: 0;
 }
 
+.dropdown-label {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    padding: 0;
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown-content li {
+    width: 415px;
+}
+
+.dropdown-content a {
+    display: flex;
+    padding: calc(var(--spacing) / 2);
+}
+
+.dropdown-content.right {
+    top: 30px;
+    right: 0;
+}
+
+.dropdown-label:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
 /**************/
 /* Single-Use */
 /**************/
@@ -101,7 +132,8 @@ header div {
 
 nav {
     align-items: last baseline;
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: 800;
 }
 
 nav ul {
@@ -110,22 +142,44 @@ nav ul {
     margin: 0;
 }
 
-nav ul li {
+nav > ul > li {
     /* Puts the elements in a single line */
     display: inline-flex;
     margin-left: 5px;
 }
 
-nav a {
+nav > ul > li > a {
     text-decoration: none;
     color: var(--black);
     padding: 2px;
 }
 
-nav a:hover {
+nav > ul > li > a:hover,
+nav .dropdown-label:hover > a,
+nav .dropdown-content {
+    text-decoration: none;
     background-color: var(--black);
     color: white;
+}
+
+nav .dropdown-content {
+    margin-top: calc(var(--spacing) / 3);
+}
+
+nav .dropdown-content li:hover {
+    background-color: var(--red);
+}
+
+nav .dropdown-content a {
+    color: white;
+}
+
+nav .dropdown-content a:hover {
     text-decoration: none;
+}
+
+nav ul li a {
+    padding: calc(var(--spacing) / 3);
 }
 
 main {
