@@ -2,6 +2,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./admin/");
     eleventyConfig.addPassthroughCopy("./static/");
     eleventyConfig.addPassthroughCopy("./LICENSE");
+    eleventyConfig.addPassthroughCopy("./CNAME");
     
     // Defaults
     eleventyConfig.addGlobalData( "favicon-32", "/static/img/icon/favicon-32.ico");
