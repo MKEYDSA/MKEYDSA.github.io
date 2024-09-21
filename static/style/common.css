@@ -80,6 +80,16 @@ a:hover {
     color: var(--red-tint-1);
 }
 
+hr {
+    size: 1px;
+    color: var(--black);
+    margin: 0;
+}
+
+aside h2 {
+    margin-bottom: 0;
+}
+
 header nav {
     align-items: last baseline;
     font-size: 30px;
