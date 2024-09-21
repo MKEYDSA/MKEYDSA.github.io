@@ -60,6 +60,11 @@ hr {
     color: var(--black);
 }
 
+iframe {
+    width: 100%;
+    height: 8.5in;
+}
+
 aside {
     width: 100%;
 }
