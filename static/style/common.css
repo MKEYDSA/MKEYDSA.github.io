@@ -15,56 +15,16 @@
     --black-tint-4: #C1C0BF;
 
     --off-white: #F2F3F4;
+
+    /* Spacing */
+    --spacing: 20px;
 }
 
-.wrapper {
-    width: calc(100% - 20px);
-    margin: 0 auto;
-}
+/* Mobile-first */
 
-.content {
-    width: calc(100% - 40px);
-}
-
-aside {
-    width: calc(100% - 40px);
-}
-
-html {
-    background-color: var(--off-white);
-}
-
-@media screen and (min-width: 1024px) {
-    .wrapper {
-        max-width: 1200px;
-    }
-
-    .content {
-        width: 65%;
-        margin-left: 20px;
-    }
-
-    aside {
-        width: 30%;
-        margin-left: auto;
-        margin-right: 20px;
-    }
-}
-
-main {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    color: var(--black);
-}
-
-.flex {
-    display: flex;
-}
-
-.right {
-    margin-left: auto;
-    margin-right: 0;
-}
+/***********/
+/* Globals */
+/***********/
 
 img {
     width: 100%;
@@ -75,52 +35,108 @@ a {
     color: var(--red);
 }
 
+.content a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="//mkeydsa.github.io"]):after {
+    content: url('/static/img/outlink.svg');
+}
+
+.content a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="//mkeydsa.github.io"]):hover:after {
+    content: url('/static/img/outlink-hover.svg');
+}
+
 a:hover {
     text-decoration: underline;
     color: var(--red-tint-1);
 }
 
+h1, h2, h3, h4, h5, h6, nav {
+    font-family: "Manifold DSA", Impact, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    font-weight: 600;
+}
+
 hr {
     size: 1px;
-    color: var(--black);
     margin: 0;
+    margin-bottom: 12px;
+    color: var(--black);
+}
+
+aside {
+    width: 100%;
 }
 
 aside h2 {
     margin-bottom: 0;
 }
 
-header nav {
-    align-items: last baseline;
-    font-size: 30px;
+/***********/
+/* Classes */
+/***********/
+
+.flex {
+    display: flex;
 }
 
-header nav a {
-    margin-left: 15px;
-    text-decoration: none;
-    color: var(--black);
-    padding: 2px;
+.right {
+    margin-left: auto;
+    margin-right: 0;
 }
 
-header nav a:hover {
-    background-color: var(--black);
-    color: white;
-    text-decoration: none;
+/**************/
+/* Single-Use */
+/**************/
+
+html {
+    background-color: var(--off-white);
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 header div {
     margin-bottom: 0;
 }
 
-hr {
-    margin-top: 0;
-    margin-bottom: 12px;
-    color: var(--black);
+nav {
+    align-items: last baseline;
+    font-size: 30px;
 }
 
-h1, h2, h3, h4, h5, h6, nav {
-    font-family: "Manifold DSA", Impact, "Franklin Gothic Bold", "Arial Black", sans-serif;
-    font-weight: 600;
+nav ul {
+    /* Make the markers disappear */
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li {
+    /* Puts the elements in a single line */
+    display: inline-flex;
+    margin-left: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--black);
+    padding: 2px;
+}
+
+nav a:hover {
+    background-color: var(--black);
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    color: var(--black);
+    padding: 0 calc(var(--spacing) / 2);
+}
+
+.content {
+    width: 100%;
 }
 
 .hero {
@@ -135,17 +151,41 @@ h1, h2, h3, h4, h5, h6, nav {
     font-weight: 900;
     font-size: 60px;
     color: white;
-    margin: 0 20px;
+    margin: 0 calc(var(--spacing) / 2);
     width: 70%;
+}
+
+/* Desktop Breakpoint */
+
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .content {
+        margin-right: var(--spacing);
+    }
+
+    aside {
+        margin-left: auto;
+        margin-right: 0;
+        max-width: 300px;
+    }
+
+    main {
+        padding: 0 var(--spacing);
+    }
+
+    .hero h1 {
+        width: 100%;
+        margin: 0 var(--spacing);
+    }
 }
 
 @media screen and (max-width: 768px) {
     .hero {
         background-image: none !important;
-    }
-
-    .hero h1 {
-        width: 100%;
     }
 
     main > .flex {
