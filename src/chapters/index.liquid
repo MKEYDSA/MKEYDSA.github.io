@@ -1,0 +1,28 @@
+---
+layout: "socials-sidebar.liquid"
+---
+
+<h1>YDSA MKE Chapters</h1>
+
+<div class="section-grid">
+  {% assign length = chapters.length | divided_by: 2 | floor %}
+  {% for i in (0..length) %}
+    {% assign num = i | times: 2 %}
+    <div class="flex">
+      {% for chapter in chapters limit: 2 offset: num %}
+        <a href="http://{{ chapter.shortcode }}.mkeydsa.org">
+          <img src="/static/img/chapter/{{ chapter.shortcode }}/group.jpg">
+          <h3>{{ chapter.text }}</h3>
+        </a>
+      {% endfor %}
+
+      {% if i == length %}
+        {% if 1 == i | modulo: 2 %}
+          <div></div>
+        {% endif %}
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+<style></style>
