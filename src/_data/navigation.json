@@ -1,4 +1,5 @@
 [
 	{"text": "about", "url": "/about"},
+	{"text": "chapters", "url": "/chapters"},
 	{"text": "posts", "url": "/posts"}
 ]
