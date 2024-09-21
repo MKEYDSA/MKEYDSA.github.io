@@ -1,6 +1,6 @@
 [
 	{"text": "about", "url": "/about", "subcategories": [
-		{"text": "our constitution", "url": "https://docs.google.com/document/d/1iF8QiCNHkIb_2EMVL7hazMFQKIVpR1f1NUfHVArs1og/edit?usp=sharing"},
+		{"text": "our constitution", "url": "/about/constitution"},
 		{"text": "leadership", "url": "/about/leadership"}
 	]},
 	{"text": "chapters", "url": "/chapters"},
