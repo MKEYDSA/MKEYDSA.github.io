@@ -1,6 +1,15 @@
-UWM-YDSA/UWM-YDSA.github.io:
-  - admin/
-  - src/_data/chapters.json
-  - src/_includes/
-  - src/404.md
-  - static/
+group:
+  repos: |
+    UWM-YDSA/UWM-YDSA.github.io@main
+  files:
+    - admin/
+    - src/_data/chapters.json
+    - src/_includes/
+    - src/404.md
+    - static/
+    - .eleventy.js
+    - .gitignore
+    - .nojekyll
+    - LICENSE
+    - package-lock.json
+    - package.json
