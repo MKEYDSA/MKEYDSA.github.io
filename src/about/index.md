@@ -1,4 +1,5 @@
 ---
+title: About YDSA MKE
 hero:
   title: "Fighting for a Socialist Future"
 # img: "/static/img/hero/index.png" (default)
