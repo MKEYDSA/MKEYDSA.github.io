@@ -38,10 +38,33 @@
             {% comment %} use navbar for local org {% endcomment %}
             <ul>
               {% for link in navigation %}
-                <li>
-                  <a href="{{ link.url }}">
-                    {{ link.text }}
-                  </a>
+                <li
+                  {% if link.subcategories or link.text == "chapters" %}
+                  class="dropdown-label"
+                  {% endif %}>
+                  {% if link.url %}<a href="{{ link.url }}">{% endif %}
+                  <span>{{ link.text }}</span>
+                  {% if link.url %}</a>{% endif %}
+
+                  {% comment %} dropdown stuff {% endcomment %}
+                  {% if link.subcategories %}
+                    <ul class="dropdown-content right">
+                      {% for item in subcategories %}
+                        <li>
+                          <a href="{{ item.url }}">{{ item.text }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% elsif link.text == "chapters" %}
+                    <ul class="dropdown-content right">
+                      {% for chapter in chapters %}
+                        <li>
+                          <a href="https://{{ chapter.shortcode }}.mkeydsa.org">{{ chapter.text }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+
                 </li>
               {% endfor %}
             </ul>
