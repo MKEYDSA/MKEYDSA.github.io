@@ -8,28 +8,18 @@ layout: "base.liquid"
   </div>
   <aside class="right">
     {% if socials %}
-      <h2>Follow Us</h2>
-      <hr>
+      {% sectitle "Follow Us" %}
       {% for link in socials %}
         <h3>
           <a href="{{ link.url }}">{{ link.text }}</a>
         </h3>
       {% endfor %}
 
-      <h2>Join YDSA@{{ shortcode }}</h2>
-      <hr>
+      {% assign fullname = "Join YDSA@" | append: shortcode %}
+      {% sectitle fullname %}
       <p></p>
     {% else %}
-      <h2>Join a MKE YDSA</h2>
-      <hr>
-      <p>Become a member of a MKE YDSA today and help build a better future, starting with your campus.</p>
-      <ul>
-        {% for link in chapters %}
-          <li>
-            <a href="https://{{ link.shortcode }}.mkeydsa.org/join">{{ link.text }}</a>
-          </li>
-        {% endfor %}
-      </ul>
+      {% include 'snippets/join-mke.liquid' %}
     {% endif %}
   </aside>
 </div>
