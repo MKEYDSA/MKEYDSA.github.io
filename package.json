@@ -4,8 +4,8 @@
   "description": "The website of the MKE YDSA and associated chapters",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --incremental --serve",
-    "build": "eleventy"
+    "start": "npx @11ty/eleventy --incremental --serve",
+    "build": "npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
