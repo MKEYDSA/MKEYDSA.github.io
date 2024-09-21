@@ -12,6 +12,14 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addGlobalData(   "hero.img", "/static/img/hero/index.png");
     eleventyConfig.addGlobalData( "hero.color", "red-tint-1");
 
+    // Shortcodes
+    eleventyConfig.addShortcode(
+        "sectitle",
+        (title) =>
+          `<h2>${title}</h2>
+            <hr>`
+    );
+
     return {
         dir: {
             input: "src",
