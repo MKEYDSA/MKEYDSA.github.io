@@ -25,6 +25,7 @@ jobs:
         uses: BetaHuhn/repo-file-sync-action@v1.21.1
         with:
           GH_PAT: ${{ secrets.UWMYDSA }}
+          SKIP_PR: true
         
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.8.0
