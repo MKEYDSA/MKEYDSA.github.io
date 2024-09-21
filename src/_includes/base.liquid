@@ -30,9 +30,15 @@
       <header>
         <div class="flex">
           {% comment %} use the org's logo for the home button {% endcomment %}
-          <a href="/">
-            <img src="{{ logo }}">
-          </a>
+          <div>
+            <a href="/">
+              <img src="{{ logo }}">
+            </a>
+
+            {% if shortcode != "mke" %}
+              <a href="https://uwmydsa.org"><- return to the home page</a>
+            {% endif %}
+          </div>
 
           <nav class="right flex">
             {% comment %} use navbar for local org {% endcomment %}
