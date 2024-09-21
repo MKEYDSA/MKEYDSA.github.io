@@ -1,0 +1,9 @@
+{% sectitle "Join a MKE YDSA" %}
+<p>Become a member of a MKE YDSA today and help build a better future, starting with your campus.</p>
+<ul>
+  {% for link in chapters %}
+    <li>
+      <a href="https://{{ link.shortcode }}.mkeydsa.org/join">{{ link.text }}</a>
+    </li>
+  {% endfor %}
+</ul>
