@@ -49,7 +49,7 @@
                   {% comment %} dropdown stuff {% endcomment %}
                   {% if link.subcategories %}
                     <ul class="dropdown-content right">
-                      {% for item in subcategories %}
+                      {% for item in link.subcategories %}
                         <li>
                           <a href="{{ item.url }}">{{ item.text }}</a>
                         </li>
