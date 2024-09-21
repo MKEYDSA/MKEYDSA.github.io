@@ -7,6 +7,9 @@ Files: *
 Copyright: YDSA@UWM <uwmdsa@gmail.com>
 License: MPL-2.0
 
+Files: src/*/*.md
+Copyright: YDSA@UWM <uwmdsa@gmail.com>
+
 Files: admin/
 Copyright: Netlify <decap@p-m.si>
 License: MIT
