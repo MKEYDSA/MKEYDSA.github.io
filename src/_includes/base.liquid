@@ -34,13 +34,17 @@
             <img src="{{ logo }}">
           </a>
 
-          {% comment %} use navbar for local org {% endcomment %}
           <nav class="right flex">
-            {% for link in navigation %}
-              <a href="{{ link.url }}">
-                {{ link.text }}
-              </a>
-            {% endfor %}
+            {% comment %} use navbar for local org {% endcomment %}
+            <ul>
+              {% for link in navigation %}
+                <li>
+                  <a href="{{ link.url }}">
+                    {{ link.text }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
           </nav>
         </div>
         <hr>
