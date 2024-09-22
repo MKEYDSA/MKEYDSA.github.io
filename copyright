@@ -1,14 +1,14 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: UWMYDSA.github.io
-Upstream-Contact: YDSA@UWM <uwmdsa@gmail.com>
-Source: https://github.com/UWMYDSA/UWMYDSA.github.io
+Upstream-Name: MKEYDSA.github.io
+Upstream-Contact: MKE YDSA <uwmdsa@gmail.com>
+Source: https://github.com/MKEYDSA/MKEYDSA.github.io
 
 Files: *
-Copyright: YDSA@UWM <uwmdsa@gmail.com>
+Copyright: MKE YDSA <uwmdsa@gmail.com>
 License: MPL-2.0
 
 Files: src/*/*.md
-Copyright: YDSA@UWM <uwmdsa@gmail.com>
+Copyright: MKE YDSA <uwmdsa@gmail.com>
 
 Files: admin/
 Copyright: Netlify <decap@p-m.si>
