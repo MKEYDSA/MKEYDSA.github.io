@@ -1,4 +1,6 @@
-main h1, h2, h3 {
+main h1, 
+main h2,
+main h3 {
   margin-bottom: 0;
   line-height: 0.5em;
 }
