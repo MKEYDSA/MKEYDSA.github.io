@@ -16,7 +16,7 @@ layout: "socials-sidebar.liquid"
 
 {% if header %}
 
-![{{ header.alt }}]({{ header.src }})
+<img id="header" src="{{ header.src }}" alt="{{ header.alt }}">
 
 {% endif %}
 
