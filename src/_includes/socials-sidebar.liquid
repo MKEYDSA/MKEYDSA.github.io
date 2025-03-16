@@ -14,13 +14,9 @@ layout: "base.liquid"
           <a href="{{ link.url }}">{{ link.text }}</a>
         </h3>
       {% endfor %}
-
-      {% assign fullname = "Join YDSA@" | append: shortcode %}
-      {% sectitle fullname %}
       <p></p>
-    {% else %}
-      {% comment %} "Join a MKE YDSA" message {% endcomment %}
-      {% include 'snippets/join-mke.liquid' %}
     {% endif %}
+    {% comment %} "Join a MKE YDSA" message {% endcomment %}
+    {% include 'snippets/join-mke.liquid' %}
   </aside>
 </div>
