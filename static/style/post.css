@@ -1,6 +1,6 @@
-main h1, 
-main h2,
-main h3 {
+#title, 
+#author,
+#date {
   margin-bottom: 0;
   line-height: 0.5em;
 }
