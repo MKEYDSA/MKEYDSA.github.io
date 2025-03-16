@@ -1,0 +1,36 @@
+---
+title: Posts & Statements
+hero:
+  title: "Posts & Statements"
+  img: "/static/img/hero/blog.png"
+layout: "socials-sidebar.liquid"
+---
+
+<style>
+  .post {
+    border-top: 3px solid var(--black-tint-4);
+    border-bottom: 3px solid var(--black-tint-4);
+    margin: 0 var(--spacing);
+    padding: calc(var(--spacing) / 2);
+  }
+</style>
+
+{% for post in collections.post %}
+
+<div class="flex post">
+  <div>
+    <h1>{{ post.title }}</h1>
+    <h2><em>by {{ post.author }}.</em></h2>
+  </div>
+
+{% if post.header %}
+  
+  <div style="width:35%">
+    <img src="{{ post.header.src }}" alt="{{ post.header.alt }}">
+  </div>
+
+{% endif %}
+
+</div>
+
+{% endfor %}
