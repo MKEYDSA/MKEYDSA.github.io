@@ -28,16 +28,16 @@
   <body>
     <div class="wrapper">
       <header>
-        <div class="flex">
+        <div class="responsive-flex">
           {% comment %} use the org's logo for the home button {% endcomment %}
           <div>
-            <a href="/">
-              <img src="{{ logo }}">
+            <a
+              href="/"
+              class="flex"
+              style="flex-shrink: 0">
+              <img src="{{ logo }}" style="margin-right: 15px; margin-bottom: calc(var(--spacing) / 3); width: 79%; max-width: 150px">
+              <img src="/static/img/icon/lockup.svg" style="max-width: 180px">
             </a>
-
-            {% if shortcode != "mke" %}
-              <a href="https://uwmydsa.org"><- return to the home page</a>
-            {% endif %}
           </div>
 
           <nav class="right flex">
