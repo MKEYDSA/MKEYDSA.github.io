@@ -2,6 +2,8 @@
 layout: "socials-sidebar.liquid"
 ---
 
+<link rel="stylesheet" href="/static/style/post.css">
+
 # {{ title }}
 
 ## *by {{ author }}.*
