@@ -22,7 +22,8 @@ eleventyExcludeFromCollections: ["post"]
 <a href="{{ post.url | url }}" class="flex post">
   <div>
     <h1>{{ post.title }}</h1>
-    <h2><em>by {{ post.author }}.</em> - {{ post.date }}</h2>
+    <h2><em>by {{ post.author }}.</em></h2>
+    <h3>{{ post.date }} ({{ post.updated }})</h3>
   </div>
 
 {% if post.header %}
