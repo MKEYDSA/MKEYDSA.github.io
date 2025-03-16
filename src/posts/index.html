@@ -10,29 +10,53 @@ eleventyExcludeFromCollections: ["post"]
 
 <style>
   .post {
-    border-top: 3px solid var(--black-tint-4);
     border-bottom: 3px solid var(--black-tint-4);
     margin: 0 var(--spacing);
     padding: calc(var(--spacing) / 2);
+    color: var(--black);
+  }
+
+  .post * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .post h1 {
+    font-size: 26px;
+  }
+
+  .post h2,
+  .post h3 {
+    font-size: 22px;
+  }
+
+  .post div:last-of-type {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .post img {
+    width: 100%;
+    height: max-content;
   }
 </style>
 
 {% for post in collections.post %}
 
-<a href="{{ post.url | url }}" class="flex post">
+<a href="{{ post.url | url }}" class="responsive-flex post">
   <div>
-    <h1>{{ post.title }}</h1>
-    <h2><em>by {{ post.author }}.</em></h2>
-    <h3>{{ post.date }} ({{ post.updated }})</h3>
+    <h1>{{ post.data.title }}</h1>
+    <h2><em>by {{ post.data.author }}.</em></h2>
+    <h3>{{ post.date | date: '%B %d, %Y' }}</h3>
   </div>
 
-{% if post.header %}
+  {% if post.data.header %}
   
-  <div style="width:35%">
-    <img src="{{ post.header.src }}" alt="{{ post.header.alt }}">
+  <div>
+    <img src="{{ post.data.header.src }}" alt="{{ post.data.header.alt }}">
   </div>
 
-{% endif %}
+  {% endif %}
 
 </a>
 
