@@ -1,7 +1,8 @@
 h1, h2 {
   margin-bottom: 0;
+  line-height: 0.3em;
 }
 
-h2, h3 {
-  line-height: 0.2em;
+#header {
+  margin-bottom: var(--spacing);
 }
