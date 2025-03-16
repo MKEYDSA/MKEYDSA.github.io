@@ -1,6 +1,9 @@
 ---
-title: Example 1
-layout: "socials-sidebar.liquid"
+title: Example
+author: John Doe
+header:
+  src: "/static/img/chapter/uwm/group.jpg"
+  alt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ante eget orci sagittis vestibulum. Curabitur accumsan a neque sed sodales. Proin lacinia, ante scelerisque pharetra tempus, diam tellus tristique enim, vel dapibus mauris purus at lacus. Cras porta porttitor congue. Vivamus ullamcorper lorem sem, id commodo nulla porta a. Etiam non lacinia est. Nullam egestas congue justo. Fusce hendrerit nulla justo, eu varius nisi pulvinar venenatis. Mauris congue neque id fermentum efficitur. Donec laoreet vulputate viverra. Sed non aliquet diam, quis accumsan quam. Fusce aliquam, dui ac sollicitudin luctus, purus ante vulputate massa, fringilla pretium velit turpis id turpis. Duis quis dictum enim. Donec ullamcorper neque quis dolor porttitor, sit amet commodo erat sagittis. Sed a dignissim turpis, ut fermentum eros. Fusce eu quam tellus.
