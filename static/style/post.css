@@ -5,6 +5,10 @@
   line-height: 0.5em;
 }
 
+aside h2 {
+  margin-bottom: 5px;
+}
+
 #header {
   margin-bottom: var(--spacing);
 }
