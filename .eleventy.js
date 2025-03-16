@@ -1,3 +1,5 @@
+const externalLinks = require('eleventy-plugin-external-links');
+
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./admin/");
     eleventyConfig.addPassthroughCopy("./static/");
@@ -20,6 +22,16 @@ module.exports = function (eleventyConfig) {
           `<h2>${title}</h2>
             <hr>`
     );
+
+    eleventyConfig.addPlugin(externalLinks, {
+        // Plugin defaults:
+        name: 'external-links',         // Plugin name
+        regex: /^(([a-z]+:)|(\/\/))/i,  // Regex that test if href is external
+        target: "_blank",               // 'target' attribute for external links
+        rel: "noopener",                // 'rel' attribute for external links
+        extensions: [".html"],          // Extensions to apply transform to
+        includeDoctype: true,           // Default to include '<!DOCTYPE html>' at the beginning of the file
+    });
 
     return {
         dir: {
