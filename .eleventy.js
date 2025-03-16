@@ -26,7 +26,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(externalLinks, {
         // Plugin defaults:
         name: 'external-links',         // Plugin name
-        regex: /^(([a-z]+:)|(\/\/))/i,  // Regex that test if href is external
+        regex: /\bhttps?:\/\/(?!([a-z]+\.)?mkeydsa\.org)[^\s\/]+(?:\/[^\s\/]+)*\/?/i,  // Regex that test if href is external
         target: "_blank",               // 'target' attribute for external links
         rel: "noopener",                // 'rel' attribute for external links
         extensions: [".html"],          // Extensions to apply transform to
