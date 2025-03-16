@@ -4,13 +4,13 @@ layout: "socials-sidebar.liquid"
 
 <link rel="stylesheet" href="/static/style/post.css">
 
-# {{ title }}
+<h1 id="title">{{ title }}</h1>
 
-## *by {{ author }}.*
+<h2 id="author"><em>by {{ author }}.</em></h2>
 
 {% if date %}
 
-{{ date | date: '%B %d, %Y' }} {% if updated %}(Updated {{ updated | date: '%B %d, %Y' }}){% endif %}
+<span class="date">{{ date | date: '%B %d, %Y' }} {% if updated %}(Updated {{ updated | date: '%B %d, %Y' }}){% endif %}</span>
 
 {% endif %}
 
