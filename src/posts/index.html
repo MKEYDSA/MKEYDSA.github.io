@@ -18,7 +18,7 @@ tags:
 
 {% for post in collections.post %}
 
-<div class="flex post">
+<a href="{{ post.url | url }}" class="flex post">
   <div>
     <h1>{{ post.title }}</h1>
     <h2><em>by {{ post.author }}.</em></h2>
@@ -32,6 +32,6 @@ tags:
 
 {% endif %}
 
-</div>
+</a>
 
 {% endfor %}
