@@ -1,6 +1,8 @@
 ---
 title: Example
 author: John Doe
+date: 2024-01-01
+updated: 2025-03-15
 header:
   src: "/static/img/chapter/uwm/group.jpg"
   alt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
