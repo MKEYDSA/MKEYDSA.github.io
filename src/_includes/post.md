@@ -4,7 +4,7 @@ layout: "socials-sidebar.liquid"
 
 # {{ title }}
 
-## *by {{ author }}.*
+## *by {{ author }}.* - {% if date %}{{ date | date: '%B %d, %Y' }} {% if updated %}(Updated {{ updated | date: '%B %d, %Y' }}){% endif %}{% endif %}
 
 {% if header %}
 
