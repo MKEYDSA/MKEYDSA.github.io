@@ -11,7 +11,7 @@ layout: "socials-sidebar.liquid"
     {% assign num = i | times: 2 %}
     <div class="flex">
       {% for chapter in chapters limit: 2 offset: num %}
-        <a href="http://{{ chapter.shortcode }}.mkeydsa.org">
+        <a href="http://{{ chapter.shortcode }}.mkeydsa.org" style="width:100%">
           <img src="/static/img/chapter/{{ chapter.shortcode }}/group.jpg">
           <h3>{{ chapter.text }}</h3>
         </a>
