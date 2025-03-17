@@ -83,8 +83,6 @@ aside h2 {
     display: flex;
 }
 
-
-
 .right {
     margin-left: auto;
     margin-right: 0;
@@ -266,6 +264,10 @@ main > .flex {
 
     main > .flex {
         flex-direction: row !important;
+    }
+    
+    main > .flex * {
+        width: 100%;
     }
 
     .hero h1 {
