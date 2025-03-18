@@ -1,6 +1,7 @@
 ---
-title: "YDSA@UWM & Down 'N Downer Present: Riot for Relief - Punks for Palestine, a Concert Benefitting UNRWA"
+title: "YDSA@UWM & Down 'N Downer Present: Riot for Relief - Punks for Palestine, a Concert Benefitting the PCRF"
 date: 2025-03-16
+updated: 2025-03-17
 header:
   src: "/static/img/posts/2025/03/16/riot4relief/riot4relief.webp"
   alt: "A horizontal banner version of the flyer featuring information about the event (read below)"
@@ -12,7 +13,7 @@ tags:
 
 *From the river and to the sea, Palestine will be free!*
 
-YDSA@UWM and Down 'N Downer are hosting a concert, "Riot for Relief - Punks for Palestine", with donations and profits going to [the United Nations Relief and Works Agency for Palestine Refugees in the Near East (UNRWA)](https://www.unrwa.org/). Featuring art vendors and Wisconsin bands Sublet, In Ropes, NIHILISM, Blind Hill, and Fake My Death, this won't be one you want to miss.
+YDSA@UWM and Down 'N Downer are hosting a concert, "Riot for Relief - Punks for Palestine", with donations and profits going to [the Palestine Children's Relief Fund (PCRF)](https://www.pcrf.net/). Featuring art vendors and Wisconsin bands Sublet, In Ropes, NIHILISM, Blind Hill, and Fake My Death, this won't be one you want to miss.
 
 DATE: April 4th
 
@@ -23,6 +24,8 @@ LOCATION: Zao MKE (2319 E Kenwood Blvd, Milwaukee, WI 53211)
 RSVP at [mkeydsa.org/riot](https://mkeydsa.org/riot).
 
 Want to help advertise? Check out the graphics kit [here](https://drive.google.com/drive/folders/1ic1_8h7J7Ss8kh4FzUTiFayqu5GdGzXk?usp=sharing).
+
+*UPDATE 03/17/2025: Beneficiary was changed from UNRWA to the PCRF.*
 
 ---
 
