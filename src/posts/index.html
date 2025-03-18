@@ -30,11 +30,14 @@ eleventyExcludeFromCollections: ["post"]
     font-size: 22px;
   }
 
+  .post div:first-of-type {
+    margin-right: calc(var(--spacing) / 2);
+  }
+
   .post div:last-of-type {
     overflow: hidden;
     height: 100%;
   }
-
 </style>
 
 {% for post in collections.post %}
