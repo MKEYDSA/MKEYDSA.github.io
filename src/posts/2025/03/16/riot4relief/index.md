@@ -13,7 +13,7 @@ tags:
 
 *From the river and to the sea, Palestine will be free!*
 
-YDSA@UWM and Down 'N Downer are hosting a concert, "Riot for Relief - Punks for Palestine", with donations and profits going to [the Palestine Children's Relief Fund (PCRF)](https://www.pcrf.net/). Featuring art vendors and Wisconsin bands Sublet, In Ropes, NIHILISM, Blind Hill, and Fake My Death, this won't be one you want to miss.
+YDSA@UWM and Down 'N Downer are hosting a concert, "Riot for Relief - Punks for Palestine", with donations and profits going to the [Palestine Children's Relief Fund (PCRF)](https://www.pcrf.net/). Featuring art vendors and Wisconsin bands Sublet, In Ropes, NIHILISM, Blind Hill, and Fake My Death, this won't be one you want to miss.
 
 DATE: April 4th
 
