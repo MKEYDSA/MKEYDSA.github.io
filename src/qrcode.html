@@ -21,21 +21,31 @@ eleventyExcludeFromCollections: true
         overflow-x: hidden;
     }
 
-    #submit {
+    #submit, #download {
         margin-top: 20px;
         margin-bottom: 20px;
         width: 100%;
-        height: 40px;
+        padding: 20px 0;
+        border-radius: 5px;
+    }
+
+    #download {
+        display: none;
+        background: var(--stem-green);
+        color: white;
+        text-align: center;
     }
 
     #qrcode {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         width: fit-content;
         max-width: 100%;
     }
 </style>
 
 <script src="/static/script/dependencies/davidshimjs-qrcodejs-04f46c6/qrcode.min.js"></script>
+
+<h1>{{ title }}</h1>
 
 <form>
     <label>
@@ -86,6 +96,8 @@ eleventyExcludeFromCollections: true
 
 <div id="qrcode"></div>
 
+<a id="download" href="" download>Download</button>
+
 <script type="text/javascript">
     const params = new URLSearchParams(window.location.search);
 
@@ -98,5 +110,12 @@ eleventyExcludeFromCollections: true
             colorLight : params.get('background'),
             correctLevel : QRCode.CorrectLevel.H
         });
+
+        let download = document.getElementById('download');
+
+        setTimeout(function(){
+            download.style.display = "block";
+            download.href = document.querySelector('#qrcode img').currentSrc;
+        }, 1000);
     }
 </script>
