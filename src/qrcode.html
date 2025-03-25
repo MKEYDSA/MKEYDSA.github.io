@@ -5,17 +5,64 @@ layout: "center.liquid"
 eleventyExcludeFromCollections: true
 ---
 
+<style>
+    h2 {
+        margin-bottom: 0;
+    }
+
+    #submit {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        height: 40px;
+    }
+
+    #qrcode {
+        margin-bottom: 40px;
+    }
+</style>
+
 <script src="/static/script/dependencies/davidshimjs-qrcodejs-04f46c6/qrcode.min.js"></script>
+
+<form>
+    <label>
+        URL:
+        <input type="url" name="url" placeholder="https://mkeydsa.org" style="width:100%;" required>
+    </label>
+    
+    <label>
+        Size (px):
+        <input type="number" name="size" value="128" max="1024" required>
+    </label><br>
+
+    <h2>Colors</h2>
+
+    <label>
+        Foreground:
+        <input type="color" name="foreground" value="#231F20" required>
+    </label>
+
+    <label>
+        Background:
+        <input type="color" name="background" value="#FFFFFF" required>
+    </label><br>
+
+    <input id="submit" type="submit" value="Generate!">
+</form>
 
 <div id="qrcode"></div>
 
 <script type="text/javascript">
-    const qrcode = new QRCode(document.getElementById('qrcode'), {
-        text: 'http://jindo.dev.naver.com/collie',
-        width: 128,
-        height: 128,
-        colorDark : '#000',
-        colorLight : '#fff',
-        correctLevel : QRCode.CorrectLevel.H
-    });
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get('url').trim() != "") {
+        const qrcode = new QRCode(document.getElementById('qrcode'), {
+            text: params.get('url'),
+            width: params.get('size'),
+            height: params.get('size'),
+            colorDark : params.get('foreground'),
+            colorLight : params.get('background'),
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    }
 </script>
