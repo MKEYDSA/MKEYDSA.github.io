@@ -10,6 +10,17 @@ eleventyExcludeFromCollections: true
         margin-bottom: 0;
     }
 
+    table, tr {
+        width: 100%;
+    }
+
+    td {
+        color: white;
+        padding: 5px;
+        width: 20%;
+        overflow-x: hidden;
+    }
+
     #submit {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -48,6 +59,27 @@ eleventyExcludeFromCollections: true
         Background:
         <input type="color" name="background" value="#FFFFFF" required>
     </label><br>
+
+    <details>
+        <summary>DSA Colors</summary>
+        
+        <table>
+            <tr>
+                <td style="background:#231F20">#231F20</td>
+                <td style="background:#3B3838">#3B3838</td>
+                <td style="background:#605C5C">#605C5C</td>
+                <td style="background:#8C8989">#8C8989</td>
+                <td style="background:#C1C0BF">#C1C0BF</td>
+            </tr>
+            <tr>
+                <td style="background:#EC1F27">#EC1F27</td>
+                <td style="background:#F04C53">#F04C53</td>
+                <td style="background:#F4797E">#F4797E</td>
+                <td style="background:#F7A5A9">#F7A5A9</td>
+                <td style="background:#FBD2D4">#FBD2D4</td>
+            </tr>
+        </table>
+    </details>
 
     <input id="submit" type="submit" value="Generate!">
 </form>
