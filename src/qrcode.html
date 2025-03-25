@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
         margin-bottom: 0;
     }
 
-    table, tr {
+    table {
         width: 100%;
     }
 
@@ -45,7 +45,7 @@ eleventyExcludeFromCollections: true
     
     <label>
         Size (px):
-        <input type="number" name="size" value="128" max="1024" required>
+        <input type="number" name="size" value="128" min="128" max="1024" required>
     </label><br>
 
     <h2>Colors</h2>
@@ -62,7 +62,7 @@ eleventyExcludeFromCollections: true
 
     <details>
         <summary>DSA Colors</summary>
-        
+
         <table>
             <tr>
                 <td style="background:#231F20">#231F20</td>
