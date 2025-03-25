@@ -178,9 +178,15 @@
     </label>
     
     <label>
-        Size (px):
-        <input type="number" name="size" value="128" min="128" max="1024" required>
-    </label> <span><em>(min - 128, max - 1024)</em></span><br>
+        Size:
+        <select name="size" required>
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="4">4x</option>
+            <option value="8">8x</option>
+            <option value="16">16x</option>
+        </select>
+    </label><br>
 
     <h2>Colors</h2>
 
@@ -228,8 +234,8 @@
     if (params.get('url').trim() != "") {
         const qrcode = new QRCode(document.getElementById('qrcode'), {
             text: params.get('url'),
-            width: params.get('size'),
-            height: params.get('size'),
+            width: 128 * params.get('size'),
+            height: 128 * params.get('size'),
             colorDark : params.get('foreground'),
             colorLight : params.get('background'),
             correctLevel : QRCode.CorrectLevel.H
