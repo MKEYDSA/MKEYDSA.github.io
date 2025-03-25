@@ -4,11 +4,11 @@ Upstream-Contact: MKE YDSA <mkeydsa@gmail.com>
 Source: https://github.com/MKEYDSA/MKEYDSA.github.io
 
 Files: *
-Copyright: MKE YDSA <uwmdsa@gmail.com>
+Copyright: MKE YDSA <mkeydsa@gmail.com>
 License: MPL-2.0
 
 Files: src/*/*.md
-Copyright: MKE YDSA <uwmdsa@gmail.com>
+Copyright: MKE YDSA <mkeydsa@gmail.com>
 
 Files: admin/
 Copyright: Netlify <decap@p-m.si>
