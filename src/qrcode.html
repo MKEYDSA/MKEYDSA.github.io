@@ -5,3 +5,17 @@ layout: "center.liquid"
 eleventyExcludeFromCollections: true
 ---
 
+<script src="/static/script/dependencies/davidshimjs-qrcodejs-04f46c6/qrcode.min.js"></script>
+
+<div id="qrcode"></div>
+
+<script type="text/javascript">
+    const qrcode = new QRCode(document.getElementById('qrcode'), {
+        text: 'http://jindo.dev.naver.com/collie',
+        width: 128,
+        height: 128,
+        colorDark : '#000',
+        colorLight : '#fff',
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
