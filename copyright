@@ -7,8 +7,17 @@ Files: *
 Copyright: MKE YDSA <mkeydsa@gmail.com>
 License: MPL-2.0
 
-Files: src/*/*.md
+Files: src/posts/ src/about/
 Copyright: MKE YDSA <mkeydsa@gmail.com>
+License: All rights reserved
+
+Files: /static/img/
+Copyright: MKE YDSA <mkeydsa@gmail.com>
+License: CC BY-NC-ND 4.0
+
+Files: /static/font/ManifoldDSA/
+Copyright: DSA National Design Committee <dsa.national.design.committee@gmail.com>
+License: CC BY-NC-ND 4.0
 
 Files: admin/
 Copyright: Netlify <decap@p-m.si>
@@ -22,6 +31,13 @@ License: MPL-2.0
  This Source Code Form is subject to the terms of the Mozilla Public
  License, v. 2.0. If a copy of the MPL was not distributed with this
  file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+License: CC BY-NC-ND 4.0
+ This work is licenced under the Creative Commons Attribution-NonCommercial 
+ -NoDerivatives 4.0 International License. To view a copy of this licence,
+ visit https://creativecommons.org/licenses/by-nc/4.0/ or send a letter to 
+ Creative Commons, 171 Second Street, Suite 300, San Francisco, California 
+ 94105, USA.
 
 License: MIT
  This work is licensed under the terms of the MIT license.  
