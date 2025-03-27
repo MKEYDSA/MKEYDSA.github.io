@@ -121,7 +121,7 @@ outlinks: true
             <ul>
               {% for link in navigation %}
                 <li
-                  {% if link.subcategories or link.text == "chapters" %}
+                  {% if link.subcategories %}
                   class="dropdown-label"
                   {% endif %}>
                   {% if link.url %}<a href="{{ link.url }}">{% endif %}
