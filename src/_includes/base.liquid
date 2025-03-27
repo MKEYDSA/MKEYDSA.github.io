@@ -51,9 +51,10 @@ outlinks: true
     {%- if title -%}
       {% assign urlTitle = title | append: " | " | append: info.org %}
     {% endif %}
-    <title>{{ urlTitle }}</title>
 
+    <title>{{ urlTitle }}</title>
     <meta property="og:title" content="{{ urlTitle }}">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ urlTitle }}">
     {%- assign summary = content | excerpt %}
     <meta name="description" content="{{ summary }}">
@@ -69,7 +70,6 @@ outlinks: true
       <meta name="twitter:site" content="{{ "@" | append: twitterTag }}">
     {%- endif %}
     <meta property="og:type" content="article">
-    <meta name="twitter:card" content="summary_large_image">
     <meta property="og:url" content="{{ info.url | append: page.url }}">
 
     <meta property="og:image" content="{{ shareImage.src | default: header.src | default: "/static/img/opengraph.jpg" | remove: "https://" | prepend: baseurl }}">
