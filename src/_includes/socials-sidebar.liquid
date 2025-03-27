@@ -35,5 +35,71 @@ layout: "base.liquid"
         {% endfor %}
       </ul>
     {% endif %}
+
+    {% if tags contains "post" %}
+      <div>
+        {% sectitle "Share" %}
+        <div id="share-buttons">
+          {% assign sharetxt = title | append: " | " | append: info.org | url_encode %}
+          {% assign full_url = info.url | append: page.url %}
+          {% assign share_url = "mailto:?subject=" | append: sharetxt | append: "&body=" | append: full_url %}
+          <a
+            id="email"
+            class="share-icon"
+            href="{{ share_url }}"
+            style="background: var(--black)">
+            <img src="/static/img/share/email.svg">
+          </a>
+          {% assign share_url = "https://x.com/intent/post?text=" | append: sharetxt | append: "&url=" | append: full_url | append: "&hashtags=ydsa,dsa" %}
+          <a
+            id="twitter"
+            class="share-icon"
+            href="{{ share_url }}"
+            style="background: #00a2f5">
+            <img src="/static/img/share/twitter.svg">
+          </a>
+          {% assign share_url = "https://bsky.app/intent/compose?text=" | append: sharetxt | append: "+" | append: full_url | append: "+%23ydsa+%23dsa" %}
+          <a
+            id="bluesky"
+            class="share-icon"
+            href="{{ share_url }}"
+            style="background: #0886fe">
+            <img src="/static/img/share/bluesky.svg">
+          </a>
+          {% assign share_url = "https://www.facebook.com/sharer/sharer.php?u=" | append: full_url %}
+          <a
+            id="facebook"
+            class="share-icon"
+            href="{{ share_url }}"
+            style="background: #1878f3">
+            <img src="/static/img/share/facebook.svg">
+          </a>
+          {% assign share_url = "https://t.me/share/url?url=" | append: full_url | append: "&text=" | append: sharetxt %}
+          <a
+            id="telegram"
+            class="share-icon"
+            href="{{ share_url }}"
+            style="background: #1caae8">
+            <img src="/static/img/share/telegram.svg">
+          </a>
+          {% assign share_url = "https://api.whatsapp.com/send?text=" | append: sharetxt | append: "+" | append: full_url %}
+          <a
+            id="whatsapp"
+            class="share-icon"
+            href="{{ share_url }}"
+            style="background: #42c553">
+            <img src="/static/img/share/whatsapp.svg">
+          </a>
+          {% assign share_url = "http://www.reddit.com/submit?url=" | append: full_url | append: "&title=" | append: sharetxt %}
+          <a
+            id="reddit"
+            class="share-icon"
+            href="{{ share_url }}"
+            style="background: #ff4500">
+            <img src="/static/img/share/reddit.svg">
+          </a>
+        </div>
+      </div>
+    {% endif %}
   </aside>
 </div>

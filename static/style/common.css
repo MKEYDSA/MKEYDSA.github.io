@@ -73,6 +73,8 @@ iframe {
 
 aside {
     width: 100%;
+    flex-grow: 1;
+    position: relative;
 }
 
 aside h2 {
@@ -161,6 +163,14 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+}
+
+#share-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: var(--spacing);
 }
 
 header div {
@@ -417,6 +427,11 @@ footer {
     .section-grid > div > a:first-of-type {
         margin-right: calc(var(--spacing) / 2);
         margin-left: 0;
+    }
+
+    div:has(#share-buttons) {
+        position: sticky !important;
+        top: var(--spacing);
     }
 }
 
