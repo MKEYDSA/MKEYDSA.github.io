@@ -3,8 +3,5 @@
     "org": "Milwaukee YDSA",
     "description": "The youth chapter of MKE DSA. One chapter, many campuses!",
     "lang": "en",
-    "shortcode": "mke",
-    "logo": "/static/img/icon/logo.svg",
-    "hero.img": "/static/img/hero/index.png",
-    "hero.color": "red-tint-1"
+    "shortcode": "mke"
 }
