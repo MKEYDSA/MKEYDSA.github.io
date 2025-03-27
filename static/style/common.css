@@ -165,7 +165,7 @@ body {
 }
 
 header div {
-    margin-top: calc(var(--spacing) / 4);
+    margin: calc(var(--spacing) / 4);
     margin-bottom: 0;
 }
 
