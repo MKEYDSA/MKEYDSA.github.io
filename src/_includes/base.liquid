@@ -24,27 +24,27 @@ outlinks: true
       href="/static/img/icon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="{{ info.shortcode | upcase }} YDSA" />
     <link rel="manifest" href="/static/img/icon/site.webmanifest" />
-    <link rel="stylesheet" href="/static/style/common.css">
+    <link rel="stylesheet" href="{{ baseurl |  append: "/static/style/common.css" }}">
     <link
       rel="stylesheet"
-      href="/static/style/print.css"
+      href="{{ baseurl |  append: "/static/style/print.css"}}"
       media="print">
 
     {%- if outlinks -%}
       {% comment %} link graphics flash on hover if not preloaded {% endcomment %}
       <link
         rel="preload"
-        href="/static/img/outlink.svg"
+        href="{{ baseurl |  append: "/static/img/outlink.svg" }}"
         as="image"
         type="image/svg+xml" />
       <link
         rel="preload"
-        href="/static/img/outlink-hover.svg"
+        href="{{ baseurl |  append: "/static/img/outlink-hover.svg" }}"
         as="image"
         type="image/svg+xml" />
     {%- else -%}
       {% comment %} disable outlink graphic {% endcomment %}
-      <link rel="stylesheet" href="/static/style/no-outlinks.css">
+      <link rel="stylesheet" href="{{ baseurl |  append: "/static/style/no-outlinks.css" }}">
     {% endif %}
 
     {%- assign shortTitle = info.org -%}
@@ -166,14 +166,15 @@ outlinks: true
             </ul>
           </nav>
 
-          <script src="/static/script/nav.js"></script>
+          <script src="{{ baseurl |  append: "/static/script/nav.js" }}"></script>
         </div>
         <hr>
       </header>
 
       {% if hero.title %}
+        {% assign heroPath = baseurl | append: "/static/img/hero/index.png" %}
         <div class="hero" style="
-          background-image: url({{ hero.img | default: "/static/img/hero/index.png" }});
+          background-image: url({{ hero.img | default: heroPath }});
           background-color: var(--{{ hero.color | default: "red-tint-1" }})">
           <h1>{{ hero.title }}</h1>
         </div>
