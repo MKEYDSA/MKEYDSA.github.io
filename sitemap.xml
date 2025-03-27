@@ -1,6 +1,3 @@
-
-
-
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
@@ -15,32 +12,32 @@
     </url>
     <url>
       <loc>https://mkeydsa.org/about/constitution/</loc>
-      <lastmod>2025-03-27T21:14:28Z</lastmod>
+      <lastmod>2025-03-27T22:11:05Z</lastmod>
       <changefreq>monthly</changefreq>
     </url>
     <url>
       <loc>https://mkeydsa.org/about/</loc>
-      <lastmod>2025-03-27T21:14:28Z</lastmod>
+      <lastmod>2025-03-27T22:11:05Z</lastmod>
       <changefreq>monthly</changefreq>
     </url>
     <url>
       <loc>https://mkeydsa.org/about/leadership/</loc>
-      <lastmod>2025-03-27T21:14:28Z</lastmod>
+      <lastmod>2025-03-27T22:11:05Z</lastmod>
       <changefreq>monthly</changefreq>
     </url>
     <url>
       <loc>https://mkeydsa.org/chapters/</loc>
-      <lastmod>2025-03-27T21:14:28Z</lastmod>
+      <lastmod>2025-03-27T22:11:05Z</lastmod>
       <changefreq>monthly</changefreq>
     </url>
     <url>
       <loc>https://mkeydsa.org/</loc>
-      <lastmod>2025-03-27T21:14:28Z</lastmod>
+      <lastmod>2025-03-27T22:11:05Z</lastmod>
       <changefreq>monthly</changefreq>
     </url>
     <url>
       <loc>https://mkeydsa.org/posts/</loc>
-      <lastmod>2025-03-27T21:14:28Z</lastmod>
+      <lastmod>2025-03-27T22:11:05Z</lastmod>
       <changefreq>monthly</changefreq>
     </url>
 </urlset>
