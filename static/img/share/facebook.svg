@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   fill="currentColor"
+   class="bi bi-facebook"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <path
+     d="M 16,8.049 C 16,3.603 12.418,-0.001 8,-0.001 3.58,0 -0.002,3.603 -0.002,8.05 c 0,4.017 2.926,7.347 6.75,7.951 V 10.376 H 4.718 V 8.05 H 6.75 V 6.275 c 0,-2.017 1.195,-3.131 3.022,-3.131 0.876,0 1.791,0.157 1.791,0.157 v 1.98 h -1.009 c -0.993,0 -1.303,0.621 -1.303,1.258 v 1.51 h 2.218 l -0.354,2.326 H 9.25 V 16 C 13.074,15.396 16,12.066 16,8.049"
+     id="path1"
+     style="fill:#ffffff;fill-opacity:1" />
+</svg>
