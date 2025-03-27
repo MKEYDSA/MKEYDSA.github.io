@@ -4,7 +4,7 @@
     font-style: normal;
     font-weight: 100;
     font-stretch: 100%;
-    src: url(/static/font/ManifoldDSA/ManifoldDSA-Light.woff2);
+    src: url(https://mkeydsa.org/static/font/ManifoldDSA/ManifoldDSA-Light.woff2);
 }
 
 @font-face {
@@ -12,7 +12,7 @@
     font-style: normal;
     font-weight: 400;
     font-stretch: 100%;
-    src: url(/static/font/ManifoldDSA/ManifoldDSA-Regular.woff2);
+    src: url(https://mkeydsa.org/static/font/ManifoldDSA/ManifoldDSA-Regular.woff2);
 }
 
 @font-face {
@@ -20,7 +20,7 @@
     font-style: normal;
     font-weight: 500;
     font-stretch: 100%;
-    src: url(/static/font/ManifoldDSA/ManifoldDSA-Medium.woff2);
+    src: url(https://mkeydsa.org/static/font/ManifoldDSA/ManifoldDSA-Medium.woff2);
 }
 
 @font-face {
@@ -28,7 +28,7 @@
     font-style: normal;
     font-weight: 600;
     font-stretch: 100%;
-    src: url(/static/font/ManifoldDSA/ManifoldDSA-DemiBold.woff2);
+    src: url(https://mkeydsa.org/static/font/ManifoldDSA/ManifoldDSA-DemiBold.woff2);
 }
 
 @font-face {
@@ -36,7 +36,7 @@
     font-style: normal;
     font-weight: 700;
     font-stretch: 100%;
-    src: url(/static/font/ManifoldDSA/ManifoldDSA-Bold.woff2);
+    src: url(https://mkeydsa.org/static/font/ManifoldDSA/ManifoldDSA-Bold.woff2);
 }
 
 @font-face {
@@ -44,7 +44,7 @@
     font-style: normal;
     font-weight: 800;
     font-stretch: 100%;
-    src: url(/static/font/ManifoldDSA/ManifoldDSA-ExtraBold.woff2);
+    src: url(https://mkeydsa.org/static/font/ManifoldDSA/ManifoldDSA-ExtraBold.woff2);
 }
 
 @font-face {
@@ -52,7 +52,7 @@
     font-style: normal;
     font-weight: 900;
     font-stretch: 100%;
-    src: url(/static/font/ManifoldDSA/ManifoldDSA-Heavy.woff2);
+    src: url(https://mkeydsa.org/static/font/ManifoldDSA/ManifoldDSA-Heavy.woff2);
 }
 
 
@@ -62,7 +62,7 @@
     font-style: italic;
     font-weight: 100;
     font-stretch: 100%;
-    src: url(/static/font/ManifoldDSA/ManifoldDSA-LightItalic.woff2);
+    src: url(https://mkeydsa.org/static/font/ManifoldDSA/ManifoldDSA-LightItalic.woff2);
 }
 
 @font-face {
@@ -70,7 +70,7 @@
     font-style: italic;
     font-weight: 400;
     font-stretch: 100%;
-    src: url(/static/font/ManifoldDSA/ManifoldDSA-RegularItalic.woff2);
+    src: url(https://mkeydsa.org/static/font/ManifoldDSA/ManifoldDSA-RegularItalic.woff2);
 }
 
 @font-face {
@@ -78,7 +78,7 @@
     font-style: italic;
     font-weight: 500;
     font-stretch: 100%;
-    src: url(/static/font/ManifoldDSA/ManifoldDSA-MediumItalic.woff2);
+    src: url(https://mkeydsa.org/static/font/ManifoldDSA/ManifoldDSA-MediumItalic.woff2);
 }
 
 @font-face {
@@ -86,7 +86,7 @@
     font-style: italic;
     font-weight: 600;
     font-stretch: 100%;
-    src: url(/static/font/ManifoldDSA/ManifoldDSA-DemiBoldItalic.woff2);
+    src: url(https://mkeydsa.org/static/font/ManifoldDSA/ManifoldDSA-DemiBoldItalic.woff2);
 }
 
 @font-face {
@@ -94,7 +94,7 @@
     font-style: italic;
     font-weight: 700;
     font-stretch: 100%;
-    src: url(/static/font/ManifoldDSA/ManifoldDSA-BoldItalic.woff2);
+    src: url(https://mkeydsa.org/static/font/ManifoldDSA/ManifoldDSA-BoldItalic.woff2);
 }
 
 @font-face {
@@ -102,7 +102,7 @@
     font-style: italic;
     font-weight: 800;
     font-stretch: 100%;
-    src: url(/static/font/ManifoldDSA/ManifoldDSA-ExtraBoldItalic.woff2);
+    src: url(https://mkeydsa.org/static/font/ManifoldDSA/ManifoldDSA-ExtraBoldItalic.woff2);
 }
 
 @font-face {
@@ -110,5 +110,5 @@
     font-style: italic;
     font-weight: 900;
     font-stretch: 100%;
-    src: url(/static/font/ManifoldDSA/ManifoldDSA-HeavyItalic.woff2);
+    src: url(https://mkeydsa.org/static/font/ManifoldDSA/ManifoldDSA-HeavyItalic.woff2);
 }
