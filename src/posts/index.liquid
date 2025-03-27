@@ -47,7 +47,7 @@ eleventyExcludeFromCollections: ["post"]
   }
 </style>
 
-{% for post in collections.post %}
+{% for post in collections.post reversed %}
 
   <a href="{{ post.url | url }}" class="responsive-flex post">
     <div>
