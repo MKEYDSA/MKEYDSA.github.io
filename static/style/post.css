@@ -30,3 +30,18 @@ aside h2 {
   padding: calc(var(--spacing) / 3);
   background-color: var(--black-tint-4);
 }
+
+.share-icon {
+  width: 36px;
+  aspect-ratio: 1/1;
+  margin-right: calc(var(--spacing) / 3);
+  border-radius: 50%;
+  background: #0886fe;
+  display: flex;
+  align-items: center;
+}
+
+.share-icon img {
+  width: 60%;
+  margin: 0 auto;
+}
