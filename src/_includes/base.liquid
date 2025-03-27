@@ -93,7 +93,7 @@ outlinks: true
               href="/"
               class="flex"
               style="overflow: hidden; width: fit-content;">
-              <img src="/static/img/icon/logo.svg" style="margin-right: 15px; margin-bottom: calc(var(--spacing) / 3); max-width: 50vh;">
+              <img src="{{ info.logo | default: "/static/img/icon/logo.svg" }}" style="margin-right: 15px; margin-bottom: calc(var(--spacing) / 3); max-width: 50vh;">
             </a>
           </div>
 
