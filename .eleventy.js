@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./static/");
     eleventyConfig.addPassthroughCopy("./LICENSE");
     eleventyConfig.addPassthroughCopy("./CNAME");
+    eleventyConfig.addPassthroughCopy({ '/src/robots.txt': '/robots.txt' });
     
     // Defaults
     eleventyConfig.addGlobalData( "favicon-32", "/static/img/icon/favicon-32.ico");
