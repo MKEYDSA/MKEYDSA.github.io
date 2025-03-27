@@ -47,15 +47,16 @@ outlinks: true
       <link rel="stylesheet" href="/static/style/no-outlinks.css">
     {% endif %}
 
-    {%- assign urlTitle = info.org -%}
+    {%- assign shortTitle = info.org -%}
     {%- if title -%}
-      {% assign urlTitle = title | append: " | " | append: info.org %}
+      {%- assign length = info.org | size | times: -1 | plus: 64 -%}
+      {%- assign shortTitle = title | truncate: length | append: " | " | append: info.org -%}
     {% endif %}
 
-    <title>{{ urlTitle }}</title>
-    <meta property="og:title" content="{{ urlTitle }}">
+    <title>{{ shortTitle }}</title>
+    <meta property="og:title" content="{{ shortTitle }}">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ urlTitle }}">
+    <meta name="twitter:title" content="{{ shortTitle }}">
     {%- assign summary = content | excerpt %}
     <meta name="description" content="{{ summary }}">
     <meta property="og:description" content="{{ summary }}">
