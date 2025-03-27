@@ -61,10 +61,9 @@ outlinks: true
     <meta propert="og:site_name" content="{{ info.org }}">
     <meta property="og:type" content="article">
     <meta property="og:url" content="{{ info.url | append: page.url }}">
-    <meta property="og:image" content="{{ shareImage | default: "/static/img" }}">
-    {%- if page.data.header.alt -%}
-      <meta property="og:image:alt" content="page.data.header.alt">
-    {% endif %}
+    <meta property="og:image" content="{{ page.data.shareImage.src | default: page.data.header.src | default: "/static/img/opengraph.jpg" }}">
+    {%- assign alt = "The logo of " | append: info.org %}
+    <meta property="og:image:alt" content="{{ page.data.shareImage.alt | default: page.data.header.alt | default: alt }}">
   </head>
   <body>
     <div class="wrapper">
