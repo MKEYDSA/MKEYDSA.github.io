@@ -44,4 +44,5 @@ aside h2 {
 .share-icon img {
   width: 60%;
   margin: 0 auto;
+  pointer-events: none;
 }
