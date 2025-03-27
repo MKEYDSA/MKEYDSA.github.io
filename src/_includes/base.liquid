@@ -1,5 +1,9 @@
+---
+outlinks: true
+---
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ info.lang }}">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +22,7 @@
       rel="apple-touch-icon"
       sizes="180x180"
       href="/static/img/icon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="MKE YDSA" />
+    <meta name="apple-mobile-web-app-title" content="{{ shortcode | upcase }} YDSA" />
     <link rel="manifest" href="/static/img/icon/site.webmanifest" />
     <link rel="stylesheet" href="/static/style/common.css">
     <link
@@ -26,23 +30,27 @@
       href="/static/style/print.css"
       media="print">
 
+    {% if outlinks %}
       {% comment %} link graphics flash on hover if not preloaded {% endcomment %}
-    <link
-      rel="preload"
-      href="/static/img/outlink.svg"
-      as="image"
-      type="image/svg+xml" />
-    <link
-      rel="preload"
-      href="/static/img/outlink-hover.svg"
-      as="image"
-      type="image/svg+xml" />
-
+      <link
+        rel="preload"
+        href="/static/img/outlink.svg"
+        as="image"
+        type="image/svg+xml" />
+      <link
+        rel="preload"
+        href="/static/img/outlink-hover.svg"
+        as="image"
+        type="image/svg+xml" />
+    {% else %}
+      {% comment %} disable outlink graphic {% endcomment %}
+      <link rel="stylesheet" href="/static/style/no-outlinks.css">
+    {% endif %}
 
     {% if title %}
-      <title>{{ title }} | {{ org }}</title>
+      <title>{{ title }} | {{ info.org }}</title>
     {% else %}
-      <title>{{ org }}</title>
+      <title>{{ info.org }}</title>
     {% endif %}
   </head>
   <body>
@@ -55,13 +63,11 @@
               href="/"
               class="flex"
               style="flex-shrink: 0">
-              <img src="{{ logo }}" style="margin-right: 15px; margin-bottom: calc(var(--spacing) / 3); width: 79%; max-width: 150px">
-              <img src="/static/img/icon/lockup.svg" style="max-width: 180px">
+              <img src="/static/img/icon/logo.svg" style="margin-right: 15px; margin-bottom: calc(var(--spacing) / 3);">
             </a>
           </div>
 
           <nav class="right flex">
-            {% comment %} use navbar for local org {% endcomment %}
             <ul>
               {% for link in navigation %}
                 <li
@@ -81,32 +87,41 @@
                         </li>
                       {% endfor %}
                     </ul>
-                  {% elsif link.text == "chapters" %}
-                    <ul class="dropdown-content right">
-                      {% for chapter in chapters %}
-                        <li>
-                          <a href="https://{{ chapter.shortcode }}.mkeydsa.org">{{ chapter.text }}</a>
-                        </li>
-                      {% endfor %}
-                    </ul>
                   {% endif %}
-
                 </li>
               {% endfor %}
+
+              {% comment %} nav items across all subdomains {% endcomment %}
+              <li class="dropdown-label">
+                <a href="{{ baseUrl | append: "/chapters/" }}">
+                  <span>chapters</span>
+                </a>
+                <ul class="dropdown-content right">
+                  {% for chapter in chapters %}
+                    <li>
+                      <a href="{{ chapter.link }}">{{ chapter.name }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </li>
+
+              <li>
+                <a href="{{ baseUrl | append: "/posts/" }}">
+                  <span>
+                    posts
+                  </span>
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
         <hr>
       </header>
 
-      {% comment %}
-        TWO POSSIBLE OPTIONS
-        1. Simple banner (see commented out code)
-        2. Title with accompanying image (B&R Style)
-      {% endcomment %}
-      {% comment %} <img src="https://placehold.co/1200x400"> {% endcomment %}
       {% if hero.title %}
-        <div class="hero" style="background-image: url({{ hero.img }}); background-color: var(--{{ hero.color }})">
+        <div class="hero" style="
+          background-image: url({{ hero.img | default: "/static/img/hero/index.png" }});
+          background-color: var(--{{ hero.color | default: "red-tint-1" }})">
           <h1>{{ hero.title }}</h1>
         </div>
       {% endif %}
@@ -114,6 +129,10 @@
       <main>
         {{ content }}
       </main>
+
+      <footer>
+        <span>Copyright © YDSA@UWM</span>
+      </footer>
     </div>
   </body>
 </html>
