@@ -8,6 +8,7 @@ group:
       - src/sitemap.njk
       - src/404.md
       - static/font/
+      - static/img/chapter/
       - static/img/hero/
       - static/img/outlink-hover.svg
       - static/img/outlink.svg
