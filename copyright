@@ -11,11 +11,11 @@ Files: src/posts/ src/about/
 Copyright: MKE YDSA <mkeydsa@gmail.com>
 License: All rights reserved
 
-Files: /static/img/
+Files: static/img/
 Copyright: MKE YDSA <mkeydsa@gmail.com>
 License: CC BY-NC-ND 4.0
 
-Files: /static/font/ManifoldDSA/
+Files: static/font/ManifoldDSA/
 Copyright: DSA National Design Committee <dsa.national.design.committee@gmail.com>
 License: CC BY-NC-ND 4.0
 
@@ -25,6 +25,10 @@ License: MIT
 
 Files: static/script/dependencies/davidshimjs-qrcodejs/
 Copyright: Shim Sangmin <ssm0123@gmail.com>
+License: MIT
+
+Files: static/img/share/
+Copyright: Bootstrap Team <https://getbootstrap.com/docs/5.3/about/team/>
 License: MIT
 
 License: MPL-2.0
