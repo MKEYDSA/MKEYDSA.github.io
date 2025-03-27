@@ -1,6 +1,7 @@
 ---
 title: Chapters
 layout: "socials-sidebar.liquid"
+outlinks: false
 ---
 
 <h1>YDSA MKE Chapters</h1>
@@ -11,9 +12,9 @@ layout: "socials-sidebar.liquid"
     {% assign num = i | times: 2 %}
     <div class="flex">
       {% for chapter in chapters limit: 2 offset: num %}
-        <a href="http://{{ chapter.shortcode }}.mkeydsa.org" style="width:100%">
+        <a href="{{ chapter.link }}" style="width:100%">
           <img src="/static/img/chapter/{{ chapter.shortcode }}/group.jpg">
-          <h3>{{ chapter.text }}</h3>
+          <h3>{{ chapter.name }}</h3>
         </a>
       {% endfor %}
 
