@@ -71,11 +71,11 @@ outlinks: true
     <meta property="og:type" content="article">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:url" content="{{ info.url | append: page.url }}">
-    <meta property="og:image" content="{{ page.data.shareImage.src | default: page.data.header.src | default: "/static/img/opengraph.jpg" }}">
-    <meta name="twitter:image" content="{{ page.data.shareImage.src | default: page.data.header.src | default: "/static/img/twitter-card.jpg" }}">
+    <meta property="og:image" content="{{ shareImage.src | default: header.src | default: "/static/img/opengraph.jpg" }}">
+    <meta name="twitter:image" content="{{ shareImage.src | default: header.src | default: "/static/img/twitter-card.jpg" }}">
     {%- assign alt = "The logo of " | append: info.org %}
-    <meta property="og:image:alt" content="{{ page.data.shareImage.alt | default: page.data.header.alt | default: alt }}">
-    <meta name="twitter:image:alt" content="{{ page.data.shareImage.alt | default: page.data.header.alt | default: alt }}">
+    <meta property="og:image:alt" content="{{ shareImage.alt | default: header.alt | default: alt }}">
+    <meta name="twitter:image:alt" content="{{ shareImage.alt | default: header.alt | default: alt }}">
   </head>
   <body>
     <div class="wrapper">
