@@ -69,9 +69,12 @@ outlinks: true
       {% assign twitterTag = filteredSocials[0].url | split: "/" | last %}
       <meta name="twitter:site" content="{{ "@" | append: twitterTag }}">
     {%- endif %}
-    <meta property="og:type" content="article">
+    {%- if tags contain "post" -%}
+      <meta property="og:type" content="article">
+    {%- else %}
+      <meta property="og:type" content="website">
+    {% endif %}
     <meta property="og:url" content="{{ info.url | append: page.url }}">
-
     <meta property="og:image" content="{{ shareImage.src | default: header.src | default: "/static/img/opengraph.jpg" | remove: "https://" | prepend: baseurl }}">
     <meta name="twitter:image" content="{{ shareImage.src | default: header.src | default: "/static/img/twitter-card.jpg" | remove: "https://" | prepend: baseurl }}">
     {%- assign alt = "The logo of " | append: info.org %}
