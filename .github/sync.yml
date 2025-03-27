@@ -1,10 +1,18 @@
 group:
   - files:
       - admin/
-      - src/_data/chapters.json
       - src/_includes/
+      - src/ai.txt
+      - src/robots.txt
+      - src/feed.njk
+      - src/sitemap.njk
       - src/404.md
-      - static/
+      - static/font/
+      - static/img/hero/
+      - static/img/outlink-hover.svg
+      - static/img/outlink.svg
+      - static/script/
+      - static/style/
       - .eleventy.js
       - .gitignore
       - .nojekyll
