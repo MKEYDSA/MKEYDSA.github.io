@@ -50,6 +50,30 @@ module.exports = function (eleventyConfig) {
         includeDoctype: true,           // Default to include '<!DOCTYPE html>' at the beginning of the file
     });
 
+    // thank you Martin Gunnarsson
+    // https://www.martingunnarsson.com/posts/eleventy-excerpts/
+    eleventyConfig.addFilter("excerpt", function (content, length) {
+        if (length <= 0) length = 200;
+
+        let excerptParagraphs = [];
+        let currentLength = 0;
+        const paragraphs = content.match(/<p>.*?<\/p>/gs) || [];
+
+        for (let paragraph of paragraphs) {
+            // Strip HTML from the paragraph
+            const text = paragraph.replace(/(<([^>]+)>)/gi, "");
+
+            if (currentLength > 0 && currentLength + text.length > length) {
+                break;
+            }
+
+            excerptParagraphs.push(text);
+            currentLength += text.length;
+        }
+
+        return excerptParagraphs.join(" ");
+    });
+
     return {
         dir: {
             input: "src",
