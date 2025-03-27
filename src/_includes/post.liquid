@@ -28,11 +28,14 @@ layout: "socials-sidebar.liquid"
 
 {{ content }}
 
-<p id="tags">
-  {% for tag in tags offset: 1 %}
-    <span>#{{ tag }}</span>
-  {% endfor %}
-</p>
+{% assign lasttag = tags | last %}
+{%- if lasttag != "post" -%}
+  <p id="tags">
+    {% for tag in tags offset: 1 %}
+      <span>#{{ tag }}</span>
+    {% endfor %}
+  </p>
+{% endif %}
 
 <div class="responsive-flex" style="width: 100%; align-items: center;">
   <span style="margin-right: calc(var(--spacing) / 3);">
