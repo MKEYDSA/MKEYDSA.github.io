@@ -58,7 +58,7 @@ outlinks: true
     {%- assign summary = content | excerpt %}
     <meta name="description" content="{{ summary }}">
     <meta property="og:description" content="{{ summary }}">
-    <meta name="twitter:description" content="{{ summary | excerpt: 47 }}">
+    <meta name="twitter:description" content="{{ summary }}">
     {%- if page.data.author -%}
       <meta property="og:author" content="{{ page.data.author }}">
     {% endif %}
@@ -71,8 +71,9 @@ outlinks: true
     <meta property="og:type" content="article">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:url" content="{{ info.url | append: page.url }}">
-    <meta property="og:image" content="{{ shareImage.src | default: header.src | default: "/static/img/opengraph.jpg" }}">
-    <meta name="twitter:image" content="{{ shareImage.src | default: header.src | default: "/static/img/twitter-card.jpg" }}">
+
+    <meta property="og:image" content="{{ shareImage.src | default: header.src | default: "/static/img/opengraph.jpg" | remove: "https://" | prepend: baseurl }}">
+    <meta name="twitter:image" content="{{ shareImage.src | default: header.src | default: "/static/img/twitter-card.jpg" | remove: "https://" | prepend: baseurl }}">
     {%- assign alt = "The logo of " | append: info.org %}
     <meta property="og:image:alt" content="{{ shareImage.alt | default: header.alt | default: alt }}">
     <meta name="twitter:image:alt" content="{{ shareImage.alt | default: header.alt | default: alt }}">
@@ -117,7 +118,7 @@ outlinks: true
 
               {% comment %} nav items across all subdomains {% endcomment %}
               <li class="dropdown-label">
-                <a href="{{ baseUrl | append: "/chapters/" }}">
+                <a href="{{ baseurl | append: "/chapters/" }}">
                   <span>chapters</span>
                 </a>
                 <ul class="dropdown-content right">
@@ -130,7 +131,7 @@ outlinks: true
               </li>
 
               <li>
-                <a href="{{ baseUrl | append: "/posts/" }}">
+                <a href="{{ baseurl | append: "/posts/" }}">
                   <span>
                     posts
                   </span>
