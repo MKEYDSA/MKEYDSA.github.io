@@ -1,6 +1,10 @@
 @import url(https://fonts.bunny.net/css?family=open-sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i);
 @import url(/static/style/manifold-dsa.css);
 
+* {
+    box-sizing: border-box;
+}
+
 :root {
     /* DSA Colors */
     --red: #EC1F27;
@@ -147,6 +151,11 @@ aside h2 {
 
 html {
     background-color: var(--off-white);
+    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
 }
 
 .wrapper {
@@ -156,6 +165,7 @@ html {
 }
 
 header div {
+    margin-top: calc(var(--spacing) / 4);
     margin-bottom: 0;
 }
 
@@ -212,7 +222,6 @@ nav ul li a {
 }
 
 main {
-    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
     font-size: 18px;
     color: var(--black);
     padding: 0 calc(var(--spacing) / 2);
@@ -240,6 +249,13 @@ main > .flex {
     color: white;
     margin: 0 calc(var(--spacing) / 2);
     width: 70%;
+}
+
+footer {
+    background-color: var(--red);
+    color: var(--off-white);
+    text-align: center;
+    padding: calc(var(--spacing) / 2);
 }
 
 /* Desktop Breakpoint */
