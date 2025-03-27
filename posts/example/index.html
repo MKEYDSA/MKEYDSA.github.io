@@ -49,7 +49,6 @@
   </head>
   <body>
     <div class="wrapper">
-
       <header>
         <div class="responsive-flex">
           
@@ -61,7 +60,25 @@
             </a>
           </div>
 
-          <nav class="right flex">
+          <nav class="right flex" style="flex-direction: column;">
+            <label for='menu'
+              tabindex="0"
+              class="flex">
+              <div>
+                <span>menu</span>
+                <svg width="32"
+                  height="32"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" fill-rule="evenodd" ></path>
+                </svg>
+              </div>
+            </label>
+            <input id='menu'
+              type='checkbox'
+              checked >
+
             <ul>
               
                 <li class="dropdown-label"
@@ -118,6 +135,8 @@
               </li>
             </ul>
           </nav>
+
+          <script src="/static/script/nav.js"></script>
         </div>
         <hr>
       </header>

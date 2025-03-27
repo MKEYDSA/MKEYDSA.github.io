@@ -83,8 +83,14 @@ aside h2 {
 /* Classes */
 /***********/
 
-.flex {
+.flex,
+.responsive-flex {
     display: flex;
+}
+
+.responsive-flex {
+    display: flex;
+    flex-direction: column;
 }
 
 .right {
@@ -94,14 +100,11 @@ aside h2 {
 
 .dropdown-label {
     position: relative;
-    display: inline-block;
 }
 
 .dropdown-content {
     padding: 0;
-    display: none;
-    position: absolute;
-    z-index: 1;
+    font-size: 22px;
 }
 
 .dropdown-content li {
@@ -109,18 +112,14 @@ aside h2 {
 }
 
 .dropdown-content a {
-    display: flex;
+    text-align: right;
     padding: calc(var(--spacing) / 2);
+    padding-right: calc(var(--spacing) * 1.25);
 }
 
 .dropdown-content.right {
     top: 30px;
     right: 0;
-}
-
-.dropdown-label:hover .dropdown-content {
-    display: flex;
-    flex-direction: column;
 }
 
 .section-grid > .flex {
@@ -169,56 +168,93 @@ header div {
     margin-bottom: 0;
 }
 
+input[type='checkbox']:not(:checked)+ul {
+    display: none;
+}
+
+label:has(+input[type='checkbox']:checked) {
+    background-color: var(--black);
+    color: var(--off-white);
+}
+
 nav {
     align-items: last baseline;
     font-size: 25px;
     font-weight: 800;
+    position: fixed;
+    top: calc(var(--spacing) / 3);
+    right: calc(var(--spacing) / 3);
+    background-color: var(--off-white);
+    border: 1px solid var(--black-tint-4);
+}
+
+nav:has(~input[type='checkbox']:checked) {
+    background-color: var(--black);
 }
 
 nav ul {
     /* Make the markers disappear */
     list-style-type: none;
     margin: 0;
+    padding: 0;
+    background-color: var(--black);
+    padding-bottom: calc(var(--spacing) / 2);
 }
 
 nav > ul > li {
     /* Puts the elements in a single line */
-    display: inline-flex;
-    margin-left: 5px;
+    display: block;
+    text-align: right;
+    margin-top: calc(var(--spacing) / 2);
 }
 
 nav > ul > li > a {
     text-decoration: none;
     color: var(--black);
     padding: 2px;
-}
-
-nav > ul > li > a:hover,
-nav .dropdown-label:hover > a,
-nav .dropdown-content {
-    text-decoration: none;
-    background-color: var(--black);
-    color: white;
+    color: var(--off-white);
 }
 
 nav .dropdown-content {
     margin-top: calc(var(--spacing) / 3);
 }
 
+nav li:hover,
 nav .dropdown-content li:hover {
     background-color: var(--red);
 }
 
+nav a,
+nav a:hover,
+nav .dropdown-content a:hover,
 nav .dropdown-content a {
-    color: white;
-}
-
-nav .dropdown-content a:hover {
     text-decoration: none;
+    color: var(--off-white);
 }
 
 nav ul li a {
     padding: calc(var(--spacing) / 3);
+}
+
+nav label {
+    text-align: right;
+    width: 100%;
+    padding: calc(var(--spacing) / 3);
+}
+
+nav label div {
+    display: flex;
+    line-height: 0;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+nav label div * {
+    align-self: center;
+}
+
+nav #menu {
+    display: none;
 }
 
 main {
@@ -286,13 +322,75 @@ footer {
         width: 100%;
         margin: 0 var(--spacing);
     }
-
-    
 }
 
 @media screen and (min-width: 768px) {
-    .responsive-flex {
+    header > div {
+        align-items: baseline;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: calc(var(--spacing) * 1.73) !important;
+    }
+
+    .dropdown-label:hover .dropdown-content {
         display: flex;
+        flex-direction: column;
+    }
+
+    .responsive-flex {
+        flex-direction: row;
+    }
+
+    nav {
+        position: relative;
+        background: #00000000;
+        border: 0;
+        align-content: baseline;
+        height: max-content;
+    }
+    
+    nav ul {
+        padding: 5px;
+        background: #00000000;
+    }
+
+    nav label,
+    nav label * {
+        display: none !important;
+    }
+
+    nav > ul > li {
+        display: inline-flex;
+    }
+
+    nav a,
+    nav .dropdown-content a {
+        color: var(--black) !important;
+    }
+
+    nav .dropdown-content li {
+        height: auto !important;
+        padding: calc(var(--spacing) / 2) calc(var(--spacing) / 3);
+
+        text-align: right;
+    }
+
+    nav .dropdown-content a {
+        color: white !important;
+        padding: 0;
+        font-size: 25px;
+    }
+
+    nav > ul > li > a:hover,
+    nav .dropdown-label:hover > a,
+    nav .dropdown-content {
+        text-decoration: none;
+        background-color: var(--black);
+        color: var(--off-white) !important;
     }
 
     .section-grid > .flex {
