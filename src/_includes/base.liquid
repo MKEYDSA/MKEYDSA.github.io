@@ -58,7 +58,7 @@ outlinks: true
     {%- assign summary = content | excerpt %}
     <meta name="description" content="{{ summary }}">
     <meta property="og:description" content="{{ summary }}">
-    <meta name="twitter:description" content="{{ summary }}">
+    <meta name="twitter:description" content="{{ summary | excerpt: 47 }}">
     {%- if page.data.author -%}
       <meta property="og:author" content="{{ page.data.author }}">
     {% endif %}
