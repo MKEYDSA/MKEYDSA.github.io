@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ '/src/robots.txt': '/robots.txt' });
     
     // Global Variables
-    eleventyConfig.addGlobalData("baseUrl", "https://mkeydsa.org");
+    eleventyConfig.addGlobalData("baseurl", "https://mkeydsa.org");
     eleventyConfig.addGlobalData("chapters", [
         {
             "name": "University of Wisconsin-Milwaukee",
