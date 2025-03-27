@@ -55,7 +55,7 @@ eleventyExcludeFromCollections: true
     
     <label>
         Size:
-        <select id="size" name="size" onchange="setDimensions();" required>
+        <select id="size" name="size" required>
             <option value="1">1x</option>
             <option value="2">2x</option>
             <option value="4">4x</option>
@@ -106,29 +106,45 @@ eleventyExcludeFromCollections: true
 <a id="download" href="" download>Download</button>
 
 <script type="text/javascript">
-    function setDimensions() {
-        let size = document.getElementById('size').value * 128;
-        document.getElementById('dimensions').textContent = `${size}x${size}`;
-    }
-    setDimensions();
-
-    const params = new URLSearchParams(window.location.search);
-
-    if (params.size > 0 && params.get('url').trim() != "") {
-        const qrcode = new QRCode(document.getElementById('qrcode'), {
-            text: params.get('url'),
-            width: 128 * params.get('size'),
-            height: 128 * params.get('size'),
-            colorDark : params.get('foreground'),
-            colorLight : params.get('background'),
-            correctLevel : QRCode.CorrectLevel.H
-        });
-
-        let download = document.getElementById('download');
-
-        setTimeout(function(){
-            download.style.display = "block";
-            download.href = document.querySelector('#qrcode img').currentSrc;
-        }, 1000);
-    }
+    document.addEventListener("DOMContentLoaded", function () {
+        const sizeDropdown = document.getElementById("size");
+        const dimensionsSpan = document.getElementById("dimensions");
+        const qrContainer = document.getElementById("qrcode");
+        const downloadBtn = document.getElementById("download");
+    
+        function setDimensions() {
+            const size = parseInt(sizeDropdown.value, 10) * 128;
+            dimensionsSpan.textContent = `${size}x${size}`;
+        }
+    
+        sizeDropdown.addEventListener("change", setDimensions);
+        setDimensions(); // Initialize on page load
+    
+        // Get URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const url = params.get("url")?.trim();
+        const size = parseInt(params.get("size"), 10) || 1;
+        const foreground = params.get("foreground") || window.getComputedStyle(document.body).getPropertyValue('--black');
+        const background = params.get("background") || "#FFFFFF";
+    
+        if (url) {
+            const qrCode = new QRCode(qrContainer, {
+                text: url,
+                width: size * 128,
+                height: size * 128,
+                colorDark: foreground,
+                colorLight: background,
+                correctLevel: QRCode.CorrectLevel.H,
+            });
+    
+            // Wait for QR Code image to load before showing the download button
+            const qrImage = qrContainer.querySelector("img");
+            if (qrImage) {
+                qrImage.onload = function () {
+                    downloadBtn.style.display = "block";
+                    downloadBtn.href = qrImage.currentSrc;
+                };
+            }
+        }
+    });    
 </script>
