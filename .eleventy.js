@@ -1,3 +1,4 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 const externalLinks = require('eleventy-plugin-external-links');
 
 module.exports = function (eleventyConfig) {
@@ -7,14 +8,27 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./CNAME");
     eleventyConfig.addPassthroughCopy({ '/src/robots.txt': '/robots.txt' });
     
-    // Defaults
-    eleventyConfig.addGlobalData( "favicon-32", "/static/img/icon/favicon-32.ico");
-    eleventyConfig.addGlobalData("favicon-192", "/static/img/icon/favicon-192.ico");
-    eleventyConfig.addGlobalData(        "org", "Milwaukee YDSA");
-    eleventyConfig.addGlobalData(  "shortcode", "mke");
-    eleventyConfig.addGlobalData(       "logo", "/static/img/icon/logo.svg")
-    eleventyConfig.addGlobalData(   "hero.img", "/static/img/hero/index.png");
-    eleventyConfig.addGlobalData( "hero.color", "red-tint-1");
+    // Global Variables
+    eleventyConfig.addGlobalData("baseUrl", "https://mkeydsa.org");
+    eleventyConfig.addGlobalData("chapters", [
+        {
+            "name": "University of Wisconsin-Milwaukee",
+            "shortcode": "uwm",
+            "link": "https://uwm.mkeydsa.org",
+            "interest": "https://uwm.mkeydsa.org/join"
+        },
+        {
+            "name": "Milwaukee School of Engineering",
+            "shortcode": "msoe",
+            "link": "https://www.instagram.com/msoe_ydsa/",
+        },
+        {
+            "name": "Marquette University",
+            "shortcode": "marquette",
+            "link": "https://www.instagram.com/ydsa.marquette/",
+            "interest": "https://forms.gle/F3gaq7CgMpRnoy8J8"
+        }
+    ]);
 
     // Shortcodes
     eleventyConfig.addShortcode(
@@ -24,9 +38,11 @@ module.exports = function (eleventyConfig) {
             <hr>`
     );
 
+    // Plugin config
+    eleventyConfig.addPlugin(pluginRss);
+
     eleventyConfig.addPlugin(externalLinks, {
-        // Plugin defaults:
-        name: 'external-links',         // Plugin name
+        name: 'external-links',
         regex: /\bhttps?:\/\/(?!([a-z]+\.)?mkeydsa\.org)[^\s\/]+(?:\/[^\s\/]+)*\/?/i,  // Regex that test if href is external
         target: "_blank",               // 'target' attribute for external links
         rel: "noopener",                // 'rel' attribute for external links
