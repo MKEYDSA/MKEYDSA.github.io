@@ -49,21 +49,33 @@ outlinks: true
 
     {%- assign urlTitle = info.org -%}
     {%- if title -%}
-      {% assign urlTitle = title | append: info.org %}
+      {% assign urlTitle = title | append: " | " | append: info.org %}
     {% endif %}
     <title>{{ urlTitle }}</title>
 
-    <meta property="og:title" content="{{ title }}">
-    <meta property="og:description" content="{{ content | excerpt }}">
+    <meta property="og:title" content="{{ urlTitle }}">
+    <meta name="twitter:title" content="{{ urlTitle }}">
+    {%- assign summary = content | excerpt %}
+    <meta name="description" content="{{ summary }}">
+    <meta property="og:description" content="{{ summary }}">
+    <meta name="twitter:description" content="{{ summary }}">
     {%- if page.data.author -%}
       <meta property="og:author" content="{{ page.data.author }}">
     {% endif %}
     <meta propert="og:site_name" content="{{ info.org }}">
+    {%- assign filteredSocials = socials | where: "text", "Twitter" -%}
+    {%- if filteredSocials.size > 0 -%}
+      {% assign twitterTag = filteredSocials[0].url | split: "/" | last %}
+      <meta name="twitter:site" content="{{ "@" | append: twitterTag }}">
+    {%- endif %}
     <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
     <meta property="og:url" content="{{ info.url | append: page.url }}">
     <meta property="og:image" content="{{ page.data.shareImage.src | default: page.data.header.src | default: "/static/img/opengraph.jpg" }}">
+    <meta name="twitter:image" content="{{ page.data.shareImage.src | default: page.data.header.src | default: "/static/img/twitter-card.jpg" }}">
     {%- assign alt = "The logo of " | append: info.org %}
     <meta property="og:image:alt" content="{{ page.data.shareImage.alt | default: page.data.header.alt | default: alt }}">
+    <meta property="twitter:image:alt" content="{{ page.data.shareImage.alt | default: page.data.header.alt | default: alt }}">
   </head>
   <body>
     <div class="wrapper">
