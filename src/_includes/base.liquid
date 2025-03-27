@@ -75,8 +75,9 @@ outlinks: true
       <meta property="og:type" content="website">
     {% endif %}
     <meta property="og:url" content="{{ info.url | append: page.url }}">
-    <meta property="og:image" content="{{ shareImage.src | default: header.src | default: "/static/img/opengraph.jpg" | remove: "https://" | prepend: baseurl }}">
-    <meta name="twitter:image" content="{{ shareImage.src | default: header.src | default: "/static/img/twitter-card.jpg" | remove: "https://" | prepend: baseurl }}">
+    <meta property="og:logo" content="{{ info.url | append: "/static/img/icon/logo.svg" }}">
+    <meta property="og:image" content="{{ shareImage.src | default: header.src | default: "/static/img/opengraph.jpg" | remove: "https://" | prepend: info.url }}">
+    <meta name="twitter:image" content="{{ shareImage.src | default: header.src | default: "/static/img/twitter-card.jpg" | remove: "https://" | prepend: info.url }}">
     {%- assign alt = "The logo of " | append: info.org %}
     <meta property="og:image:alt" content="{{ shareImage.alt | default: header.alt | default: alt }}">
     <meta name="twitter:image:alt" content="{{ shareImage.alt | default: header.alt | default: alt }}">
