@@ -1,0 +1,23 @@
+---
+permalink: /sitemap.xml
+
+eleventyExcludeFromCollections: true
+---
+
+{# https://mikefallows.com/posts/adding-robots-txt-to-eleventy-site/#excluding-pages-from-sitemap.xml #}
+
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for page in collections.all %}
+  {%- set adminUrl = r/^\/admin\//i.test(page.url) %}
+  {%- set draft = page.data.draft %}
+  {%- if not adminUrl and not draft  %}
+    {%- set absoluteUrl %}{{ page.url | url | absoluteUrl(info.url) }}{% endset %}
+    <url>
+      <loc>{{ absoluteUrl }}</loc>
+      <lastmod>{{ page.date | dateToRfc3339 }}</lastmod>
+      <changefreq>{{ page.data.changeFreq if page.data.changeFreq else "monthly" }}</changefreq>
+    </url>
+  {%- endif %}
+{%- endfor %}
+</urlset>
