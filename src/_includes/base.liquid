@@ -22,7 +22,7 @@ outlinks: true
       rel="apple-touch-icon"
       sizes="180x180"
       href="/static/img/icon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="{{ shortcode | upcase }} YDSA" />
+    <meta name="apple-mobile-web-app-title" content="{{ info.shortcode | upcase }} YDSA" />
     <link rel="manifest" href="/static/img/icon/site.webmanifest" />
     <link rel="stylesheet" href="/static/style/common.css">
     <link
@@ -30,7 +30,7 @@ outlinks: true
       href="/static/style/print.css"
       media="print">
 
-    {% if outlinks %}
+    {%- if outlinks -%}
       {% comment %} link graphics flash on hover if not preloaded {% endcomment %}
       <link
         rel="preload"
@@ -42,15 +42,28 @@ outlinks: true
         href="/static/img/outlink-hover.svg"
         as="image"
         type="image/svg+xml" />
-    {% else %}
+    {%- else -%}
       {% comment %} disable outlink graphic {% endcomment %}
       <link rel="stylesheet" href="/static/style/no-outlinks.css">
     {% endif %}
 
-    {% if title %}
-      <title>{{ title }} | {{ info.org }}</title>
-    {% else %}
-      <title>{{ info.org }}</title>
+    {%- assign urlTitle = info.org -%}
+    {%- if title -%}
+      {% assign urlTitle = title | append: info.org %}
+    {% endif %}
+    <title>{{ urlTitle }}</title>
+
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ content | excerpt }}">
+    {%- if page.data.author -%}
+      <meta property="og:author" content="{{ page.data.author }}">
+    {% endif %}
+    <meta propert="og:site_name" content="{{ info.org }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ info.url | append: page.url }}">
+    <meta property="og:image" content="{{ shareImage | default: "/static/img" }}">
+    {%- if page.data.header.alt -%}
+      <meta property="og:image:alt" content="page.data.header.alt">
     {% endif %}
   </head>
   <body>
