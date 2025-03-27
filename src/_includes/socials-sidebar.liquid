@@ -36,7 +36,7 @@ layout: "base.liquid"
       </ul>
     {% endif %}
 
-    {% if tags contains "post" %}
+    {% if tags contains "post" and title != "Posts & Statements" %}
       <div>
         {% sectitle "Share" %}
         <div id="share-buttons">
