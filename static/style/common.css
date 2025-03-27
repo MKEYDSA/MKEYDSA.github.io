@@ -32,6 +32,11 @@
 /* Globals */
 /***********/
 
+html, body {
+    height: 100%;
+    overscroll-behavior-y: none;
+}
+
 img {
     width: 100%;
 }
