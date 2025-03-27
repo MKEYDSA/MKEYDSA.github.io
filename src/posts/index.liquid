@@ -16,6 +16,10 @@ eleventyExcludeFromCollections: ["post"]
     color: var(--black);
   }
 
+  .post:last-of-type {
+    border-bottom: 0 !important;
+  }
+
   .post * {
     margin-top: 0;
     margin-bottom: 0;
@@ -42,21 +46,23 @@ eleventyExcludeFromCollections: ["post"]
 
 {% for post in collections.post %}
 
-<a href="{{ post.url | url }}" class="responsive-flex post">
-  <div>
-    <h1>{{ post.data.title }}</h1>
-    <h2><em>by {{ post.data.author }}</em></h2>
-    <h3>{{ post.date | date: '%B %d, %Y' }}</h3>
-  </div>
+  <a href="{{ post.url | url }}" class="responsive-flex post">
+    <div>
+      <h1>{{ post.data.title }}</h1>
+      <h2>
+        <em>by {{ post.data.author }}</em>
+      </h2>
+      <h3>{{ post.date | date: '%B %d, %Y' }}</h3>
+    </div>
 
-  {% if post.data.header %}
-  
-  <div>
-    <img src="{{ post.data.header.src }}" alt="{{ post.data.header.alt }}">
-  </div>
+    {% if post.data.header %}
 
-  {% endif %}
+      <div>
+        <img src="{{ post.data.header.src }}" alt="{{ post.data.header.alt }}">
+      </div>
 
-</a>
+    {% endif %}
+
+  </a>
 
 {% endfor %}
