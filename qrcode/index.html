@@ -179,13 +179,14 @@
     
     <label>
         Size:
-        <select name="size" required>
+        <select id="size" name="size" onchange="setDimensions();" required>
             <option value="1">1x</option>
             <option value="2">2x</option>
             <option value="4">4x</option>
             <option value="8">8x</option>
             <option value="16">16x</option>
         </select>
+        <em style="font-size:small;"><span id="dimensions"></span> px</em>
     </label><br>
 
     <h2>Colors</h2>
@@ -229,9 +230,15 @@
 <a id="download" href="" download>Download
 
 <script type="text/javascript">
+    function setDimensions() {
+        let size = document.getElementById('size').value * 128;
+        document.getElementById('dimensions').textContent = `${size}x${size}`;
+    }
+    setDimensions();
+
     const params = new URLSearchParams(window.location.search);
 
-    if (params.get('url').trim() != "") {
+    if (params.size > 0 && params.get('url').trim() != "") {
         const qrcode = new QRCode(document.getElementById('qrcode'), {
             text: params.get('url'),
             width: 128 * params.get('size'),
