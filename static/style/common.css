@@ -160,7 +160,10 @@ body {
 }
 
 .wrapper {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -309,6 +312,7 @@ footer {
     color: var(--off-white);
     text-align: center;
     padding: calc(var(--spacing) / 2);
+    margin-top: auto;
 }
 
 /* Desktop Breakpoint */
