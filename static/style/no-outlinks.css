@@ -1,0 +1,7 @@
+.content a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="mkeydsa"]):after {
+    content: "";
+}
+
+.content a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="mkeydsa"]):hover:after {
+    content: "";
+}
