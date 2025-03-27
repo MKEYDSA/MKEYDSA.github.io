@@ -16,7 +16,24 @@ layout: "base.liquid"
       {% endfor %}
       <p></p>
     {% endif %}
-    {% comment %} "Join a MKE YDSA" message {% endcomment %}
-    {% include 'snippets/join-mke.liquid' %}
+
+    {% if info.shortcode != "mke" %}
+      {% assign title = "Join " | append: info.org %}
+      {% sectitle title %}
+      <p>Join {{ info.org }} today and help build a better future, for all of us.</p>
+      <h3>
+        <a href="{{ url | append: "/join/" }}">{{ title }}</a>
+      </h3>
+    {% else %}
+      {% sectitle "Join a Milwaukee YDSA" %}
+      <p>Become a member of a MKE YDSA today and help build a better future, starting with your campus.</p>
+      <ul>
+        {% for chapter in chapters %}
+          <li>
+            <a href="{{ chapter.interest | default: chapter.link }}">{{ chapter.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   </aside>
 </div>
