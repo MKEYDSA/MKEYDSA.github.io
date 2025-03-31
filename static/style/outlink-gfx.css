@@ -1,7 +1,7 @@
 .content a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="mkeydsa"]):after {
-    content: "";
+    content: url('https://mkeydsa.org/static/img/outlink.svg');
 }
 
 .content a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="mkeydsa"]):hover:after {
-    content: "";
+    content: url('https://mkeydsa.org/static/img/outlink-hover.svg');
 }

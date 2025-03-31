@@ -46,14 +46,6 @@ a {
     color: var(--red);
 }
 
-.content a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="mkeydsa"]):after {
-    content: url('https://mkeydsa.org/static/img/outlink.svg');
-}
-
-.content a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="mkeydsa"]):hover:after {
-    content: url('https://mkeydsa.org/static/img/outlink-hover.svg');
-}
-
 a:hover {
     text-decoration: underline;
     color: var(--red-tint-1);
