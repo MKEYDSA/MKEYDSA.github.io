@@ -33,6 +33,10 @@ layout: "base.liquid"
             <a href="{{ chapter.interest | default: chapter.link }}">{{ chapter.name }}</a>
           </li>
         {% endfor %}
+
+        <li>
+          <a href="{{ baseurl | append: "/startachapter/" }}">Start a Chapter!</a>
+        </li>
       </ul>
     {% endif %}
 
