@@ -47,12 +47,14 @@ outlinks: true
       <link rel="stylesheet" href="{{ baseurl |  append: "/static/style/no-outlinks.css" }}">
     {% endif %}
 
+    {% comment %} resize title to twitter max {% endcomment %}
     {%- assign shortTitle = info.org -%}
     {%- if title -%}
       {%- assign length = info.org | size | times: -1 | plus: 64 -%}
       {%- assign shortTitle = title | truncate: length | append: " | " | append: info.org -%}
     {% endif %}
 
+    {% comment %} opengraph and twitter card information {% endcomment %}
     <title>{{ shortTitle }}</title>
     <meta property="og:title" content="{{ shortTitle }}">
     <meta name="twitter:card" content="summary_large_image">
@@ -97,6 +99,7 @@ outlinks: true
             </a>
           </div>
 
+          {% comment %} hamburger menu stuff (only visible on small screens) {% endcomment %}
           <nav class="right flex" style="flex-direction: column;">
             <label
               for='menu'
@@ -119,6 +122,7 @@ outlinks: true
               type='checkbox'
               checked />
 
+            {% comment %} the actual nav {% endcomment %}
             <ul>
               {% for link in navigation %}
                 <li
@@ -175,6 +179,7 @@ outlinks: true
         <hr>
       </header>
 
+      {% comment %} hero stuff {% endcomment %}
       {% if hero.title %}
         {% assign heroPath = baseurl | append: "/static/img/hero/index.png" %}
         <div class="hero" style="
