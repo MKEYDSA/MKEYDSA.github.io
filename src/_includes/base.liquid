@@ -31,7 +31,9 @@ outlinks: true
       media="print">
 
     {%- if outlinks -%}
-      {% comment %} link graphics flash on hover if not preloaded {% endcomment %}
+      <link rel="stylesheet" href="{{ baseurl |  append: "/static/style/outlink-gfx.css" }}">
+
+        {% comment %} link graphics flash on hover if not preloaded {% endcomment %}
       <link
         rel="preload"
         href="{{ baseurl |  append: "/static/img/outlink.svg" }}"
@@ -42,9 +44,6 @@ outlinks: true
         href="{{ baseurl |  append: "/static/img/outlink-hover.svg" }}"
         as="image"
         type="image/svg+xml" />
-    {%- else -%}
-      {% comment %} disable outlink graphic {% endcomment %}
-      <link rel="stylesheet" href="{{ baseurl |  append: "/static/style/no-outlinks.css" }}">
     {% endif %}
 
     {% comment %} resize title to twitter max {% endcomment %}
