@@ -1,7 +1,7 @@
 ---
 title: "YDSA@UWM & Down 'N Downer Present: Riot for Relief - Punks for Palestine, a Concert Benefitting the PCRF"
 date: 2025-03-16
-updated: 2025-03-17
+updated: 2025-03-28
 header:
   src: "/static/img/posts/2025/03/16/riot4relief/riot4relief.webp"
   alt: "A horizontal banner version of the flyer featuring information about the event (read below)"
@@ -23,9 +23,13 @@ LOCATION: Zao MKE (2319 E Kenwood Blvd, Milwaukee, WI 53211)
 
 RSVP at [mkeydsa.org/riot](https://mkeydsa.org/riot).
 
+Donate to the PCRF [here](https://actionnetwork.org/fundraising/riot4relief-punks4palestine?source=direct_link&).
+
 Want to help advertise? Check out the graphics kit [here](https://drive.google.com/drive/folders/1ic1_8h7J7Ss8kh4FzUTiFayqu5GdGzXk?usp=sharing).
 
 *UPDATE 03/17/2025: Beneficiary was changed from UNRWA to the PCRF.*
+
+*UPDATE 03/28/2025: Added donation link.*
 
 ---
 
