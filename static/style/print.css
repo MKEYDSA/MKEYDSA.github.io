@@ -1,5 +1,9 @@
 @import url(https://mkeydsa.org/static/style/no-outlinks.css);
 
+html {
+    background-color: white !important;
+}
+
 nav {
     display: none !important;
 }
