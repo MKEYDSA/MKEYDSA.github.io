@@ -1,5 +1,6 @@
 ---
 title: "YDSA@UWM & Down 'N Downer Present: Riot for Relief - Punks for Palestine, a Concert Benefitting the PCRF"
+author: YDSA@UWM Outreach Committee
 date: 2025-03-16
 updated: 2025-03-28
 header:
