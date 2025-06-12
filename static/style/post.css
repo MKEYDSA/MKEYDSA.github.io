@@ -23,6 +23,7 @@ aside h2 {
 
 #tags {
   margin-top: calc(var(--spacing) * 3);
+  line-height: calc(var(--spacing) * 2.25);
 }
 
 #tags * {
