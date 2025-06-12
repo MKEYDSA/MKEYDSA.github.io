@@ -194,7 +194,6 @@ nav {
     position: fixed;
     top: calc(var(--spacing) / 3);
     right: calc(var(--spacing) / 3);
-    background-color: var(--off-white);
     border: 1px solid var(--black-tint-4);
 }
 
