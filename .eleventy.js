@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./CNAME");
     eleventyConfig.addPassthroughCopy({ './src/robots.txt': '/robots.txt' });
     eleventyConfig.addPassthroughCopy({ './src/ai.txt': '/ai.txt' });
+    eleventyConfig.addPassthroughCopy({ './src/letter_for_msoe_baumgartner.pdf': '/letter_for_msoe_baumgartner.pdf' });
     
     // Global Variables
     eleventyConfig.addGlobalData("baseurl", "https://mkeydsa.org");
